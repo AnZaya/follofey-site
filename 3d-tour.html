@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D-тур — FOLLOFEY A3 Max</title>
+<meta name="description" content="Виртуальный 3D-тур по внутреннему устройству внедорожного жилого модуля FOLLOFEY A3 Max. Осмотрите кемпер изнутри.">
+<meta property="og:title" content="3D-тур FOLLOFEY A3 Max — загляните внутрь">
+<meta property="og:description" content="Виртуальный 3D-тур по модулю FOLLOFEY A3 Max. Полный обзор внутреннего пространства.">
+<meta property="og:image" content="assets/logo.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏕️</text></svg>">
+<style>
+  :root { --primary: #ff6500; --dark: #111; --darker: #0a0a0a; --text: #e0e0e0; --muted: #888; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--darker); color: var(--text); line-height: 1.6;
+  }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(10,10,10,.95); backdrop-filter: blur(12px);
+    border-bottom: 1px solid #222;
+  }
+  nav .container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  nav .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  nav .logo img { height: 32px; width: auto; }
+  nav .logo span { font-size: 20px; font-weight: 700; color: #fff; letter-spacing: 1px; }
+  nav .links { display: flex; gap: 24px; align-items: center; }
+  nav .links a { color: #aaa; text-decoration: none; font-size: 14px; transition: color .2s; }
+  nav .links a:hover { color: var(--primary); }
+  nav .links a.active { color: var(--primary); }
+  .back-link { color: var(--muted); text-decoration: none; font-size: 14px; }
+  .back-link:hover { color: var(--primary); }
+
+  .page-header {
+    padding-top: 100px; padding-bottom: 40px; text-align: center;
+  }
+  .page-header h1 { font-size: 40px; font-weight: 800; margin-bottom: 12px; }
+  .page-header h1 span { color: var(--primary); }
+  .page-header p { color: var(--muted); font-size: 16px; max-width: 600px; margin: 0 auto; }
+
+  .vr-container {
+    max-width: 1100px; margin: 0 auto 60px; padding: 0 24px;
+    border-radius: 16px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,.5);
+  }
+  .vr-container iframe {
+    width: 100%; height: 600px; border: none; display: block;
+  }
+  @media (max-width: 768px) {
+    .vr-container iframe { height: 400px; }
+    .page-header h1 { font-size: 28px; }
+  }
+
+  .info-section {
+    max-width: 800px; margin: 0 auto 80px; padding: 0 24px;
+  }
+  .info-section h2 { font-size: 24px; margin-bottom: 16px; color: #fff; }
+  .info-section h2 span { color: var(--primary); }
+  .info-section ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .info-section li {
+    background: #1a1a1a; padding: 16px 20px; border-radius: 10px;
+    border-left: 3px solid var(--primary); font-size: 14px; color: #ccc;
+  }
+  .info-section li strong { color: #fff; display: block; margin-bottom: 4px; }
+  @media (max-width: 600px) { .info-section ul { grid-template-columns: 1fr; } }
+
+  .cta-block {
+    text-align: center; padding: 60px 24px; background: linear-gradient(135deg, #1a1a1a, #0a0a0a);
+  }
+  .cta-block h2 { font-size: 28px; margin-bottom: 12px; }
+  .cta-block p { color: var(--muted); margin-bottom: 24px; }
+  .btn-primary {
+    background: var(--primary); color: #fff; padding: 14px 36px; border-radius: 10px;
+    text-decoration: none; font-weight: 600; font-size: 16px; display: inline-block;
+    transition: background .2s;
+  }
+  .btn-primary:hover { background: #e55a00; }
+
+  footer {
+    text-align: center; padding: 40px; color: var(--muted); font-size: 13px;
+    border-top: 1px solid #222;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="/" class="logo">
+      <img src="assets/logo.png" alt="FOLLOFEY">
+      <span>FOLLOFEY</span>
+    </a>
+    <div class="links">
+      <a href="/">На главную</a>
+      <a href="/#models">Модели</a>
+      <a href="/3d-tour.html" class="active">3D-тур</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#contact" class="nav-cta" style="background:var(--primary);color:#fff;padding:8px 20px;border-radius:8px;font-weight:600;font-size:13px;text-decoration:none;">Связаться</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>3D-тур: <span>FOLLOFEY A3 Max</span></h1>
+  <p>Осмотрите внутреннее устройство модуля со всех сторон. Вращайте, приближайте, изучайте.</p>
+</div>
+
+<div class="vr-container">
+  <iframe src="https://www.720yun.com/vr/931jtOwyzf9" allowfullscreen loading="lazy" title="3D-тур FOLLOFEY A3 Max"></iframe>
+</div>
+
+<div class="info-section">
+  <h2>Что вы <span>увидите</span></h2>
+  <ul>
+    <li><strong>Внутреннее пространство</strong>Спальная зона, кухня, место для хранения</li>
+    <li><strong>Материалы отделки</strong>Сэндвич-панели, алюминий, стеклопластик</li>
+    <li><strong>Системы автономности</strong>Солнечная панель, аккумулятор, отопитель</li>
+    <li><strong>Эргономика</strong>Расположение мебели и свободное пространство</li>
+    <li><strong>Освещение</strong>Дневной свет через окна, LED-подсветка</li>
+    <li><strong>Качество сборки</strong>Детали, стыки, фурнитура</li>
+  </ul>
+</div>
+
+<div class="cta-block">
+  <h2>Хотите такой же?</h2>
+  <p>Закажите модуль FOLLOFEY под ваш пикап. Срок изготовления — от 30 дней.</p>
+  <a href="/#contact" class="btn-primary">Узнать цену</a>
+</div>
+
+<footer>
+  <p>© 2026 FOLLOFEY — Внедорожные жилые модули для пикапов</p>
+</footer>
+
+</body>
+</html>
