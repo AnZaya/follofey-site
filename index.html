@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FOLLOFEY — дом, который всегда с тобой</title>
-<meta name="description" content="Жилые модули для пикапов FOLLOFEY. Свобода путешествовать с комфортом. Адаптация к российскому климату.">
+<meta name="description" content="Жилые модули для пикапов FOLLOFEY. Свобода путешествовать с комфортом.">
 <meta property="og:title" content="FOLLOFEY — дом, который всегда с тобой">
 <meta property="og:description" content="Жилые модули для пикапов. Свобода путешествовать с комфортом.">
-<meta property="og:image" content="assets/images/logo.png">
+<meta property="og:image" content="assets/images/img1.JPG">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏕️</text></svg>">
 <style>
@@ -18,123 +18,130 @@ img{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration:none}
 .container{max-width:1200px;margin:0 auto;padding:0 20px}
 
-/* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#292929;padding:14px 0}
+/* ===== NAVIGATION (как на follofey.ru) ===== */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:#292929;padding:10px 0;min-height:60px}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap}
-.nav-logo img{height:36px;border-radius:50%}
-.nav-links{display:flex;gap:28px;list-style:none}
-.nav-links a{color:#fff;font-size:15px;font-weight:400;transition:color .2s}
-.nav-links a:hover{color:#ff6500}
+.nav-left,.nav-right{display:flex;gap:24px;list-style:none;align-items:center}
+.nav-left a,.nav-right a{color:#fff;font-size:16px;font-weight:500;transition:color .2s}
+.nav-left a:hover,.nav-right a:hover{color:#ff6500}
+.nav-center{text-align:center;line-height:1}
+.nav-center .brand{font-size:28px;font-weight:700;color:#ff6500;letter-spacing:3px}
+.nav-center .sub{font-size:11px;color:#fff;letter-spacing:4px;text-transform:uppercase}
 .hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px}
 .hamburger span{display:block;width:24px;height:2px;background:#ff6500;margin:5px 0;border-radius:2px}
 
-/* HERO */
-.hero{position:relative;height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;margin-top:60px}
+/* ===== HERO (текст внизу, как на follofey.ru) ===== */
+.hero{position:relative;height:100vh;display:flex;align-items:flex-end;overflow:hidden;margin-top:60px}
 .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
-.hero .overlay{position:absolute;inset:0;background:rgba(0,0,0,0.55);z-index:1}
-.hero-content{position:relative;z-index:2;padding:0 20px;max-width:750px}
-.hero h1{font-size:54px;color:#fff;margin-bottom:14px;line-height:1.15}
-.hero p{font-size:19px;color:#ddd;margin-bottom:30px;font-family:Arial,sans-serif;line-height:1.6}
-.btn{display:inline-block;background:#ff6500;color:#fff;padding:15px 48px;border-radius:30px;font-size:15px;font-weight:600;border:none;cursor:pointer;font-family:Arial,sans-serif;transition:opacity .2s}
+.hero-gradient{position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,0.55) 100%)}
+.hero-content{position:relative;z-index:2;padding:60px 20px 80px;max-width:800px;width:100%;margin:0 auto;text-align:center}
+.hero h1{font-size:52px;color:#fff;margin-bottom:12px;line-height:1.15;text-shadow:0 2px 8px rgba(0,0,0,0.3)}
+.hero p{font-size:18px;color:#eee;margin-bottom:28px;font-family:Arial,sans-serif;line-height:1.6;text-shadow:0 1px 4px rgba(0,0,0,0.3)}
+.btn{display:inline-block;background:#ff6500;color:#fff;padding:14px 44px;border-radius:30px;font-size:15px;font-weight:600;border:none;cursor:pointer;font-family:Arial,sans-serif;transition:opacity .2s}
 .btn:hover{opacity:.85}
+.btn-outline{background:transparent;color:#fff;border:2px solid #fff}
 
-/* SECTIONS */
-.section{padding:90px 0}
+/* ===== SECTIONS ===== */
+.section{padding:80px 0}
 .section-white{background:#fff}
 .section-dark{background:#292929;color:#fff}
-.section-title{font-size:38px;text-align:center;margin-bottom:12px}
+.section-title{font-size:36px;text-align:center;margin-bottom:10px}
 .section-title span{color:#ff6500}
-.section-desc{text-align:center;max-width:650px;margin:0 auto 50px;font-size:16px;font-family:Arial,sans-serif;opacity:.85}
+.section-desc{text-align:center;max-width:640px;margin:0 auto 40px;font-size:16px;font-family:Arial,sans-serif;opacity:.85}
 
-/* ABOUT */
-.about{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;margin-bottom:40px}
-.about-text{font-family:Arial,sans-serif;font-size:16px;line-height:1.8}
-.about-text p{margin-bottom:14px}
-.about-gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.about-gallery img{width:100%;border-radius:12px;height:220px;object-fit:cover}
-.about-gallery .wide{grid-column:1/-1}
+/* ===== ABOUT ===== */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;margin-bottom:30px}
+.about-text{font-family:Arial,sans-serif;font-size:15px;line-height:1.8}
+.about-text p{margin-bottom:12px}
+.quote{font-style:italic;font-size:17px;color:#ff6500;border-left:3px solid #ff6500;padding-left:18px;margin:16px 0}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.about-grid img{width:100%;border-radius:12px;height:200px;object-fit:cover}
+.about-grid .full{grid-column:1/-1;height:260px}
 
-/* SPECS */
-.specs{text-align:center;padding:20px 0 60px}
-.specs p{font-size:22px;line-height:1.7}
+/* ===== SPECS BANNER ===== */
+.specs{text-align:center;padding:30px 0 50px}
+.specs p{font-size:20px;line-height:1.7;color:#333}
 
-/* ADVANTAGES */
-.adv-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:1000px;margin:0 auto}
-.adv-item{display:flex;gap:16px}
-.adv-icon{width:32px;height:32px;min-width:32px;background:#ff6500;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:3px}
-.adv-icon svg{width:18px;height:18px}
-.adv-item h3{font-size:17px;margin-bottom:5px}
-.adv-item p{font-size:14px;color:#bbb;font-family:Arial,sans-serif;line-height:1.6}
+/* ===== ADVANTAGES ===== */
+.adv{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:960px;margin:0 auto}
+.adv-item{display:flex;gap:14px}
+.adv-icon{width:30px;height:30px;min-width:30px;background:#ff6500;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.adv-icon svg{width:16px;height:16px}
+.adv-item h3{font-size:16px;margin-bottom:4px}
+.adv-item p{font-size:13px;color:#bbb;font-family:Arial,sans-serif;line-height:1.5}
 
-/* MODELS */
-.models{display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:900px;margin:0 auto}
-.model-card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 6px 24px rgba(0,0,0,0.08)}
-.model-img{height:260px;background-size:cover;background-position:center;background-color:#333}
-.model-body{padding:28px}
-.model-body h3{font-size:24px;margin-bottom:6px}
-.model-body p{font-family:Arial,sans-serif;font-size:14px;color:#666;margin-bottom:14px;line-height:1.6}
-.price{font-size:26px;font-weight:700;color:#ff6500;margin-bottom:18px}
-.model-btns{display:flex;gap:10px;flex-wrap:wrap}
+/* ===== MODELS ===== */
+.models{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:880px;margin:0 auto}
+.model-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.07)}
+.model-img{height:240px;background-size:cover;background-position:center;background-color:#333}
+.model-body{padding:24px}
+.model-body h3{font-size:22px;margin-bottom:6px}
+.model-body p{font-family:Arial,sans-serif;font-size:13px;color:#666;margin-bottom:12px;line-height:1.5}
+.price{font-size:24px;font-weight:700;color:#ff6500;margin-bottom:16px}
+.model-btns{display:flex;gap:8px;flex-wrap:wrap}
 
-/* CONFIG */
-.config-wrap{margin-top:50px;text-align:center}
-.config-wrap h3{font-size:22px;margin-bottom:24px}
-.config-frame{width:100%;height:700px;border-radius:12px;overflow:hidden;border:1px solid #e0e0e0}
-.config-frame iframe{width:100%;height:100%;border:none}
+/* ===== CONFIGURATOR ===== */
+.config-wrap{margin-top:10px}
+.config-wrap iframe{width:100%;height:1850px;border:none;max-width:1200px;margin:0 auto;display:block}
 
-/* FAQ */
+/* ===== FAQ ===== */
 .faq{max-width:800px;margin:0 auto}
-.faq-item{border-bottom:1px solid #ddd;padding:18px 0}
-.faq-q{font-size:17px;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center;width:100%;background:none;border:none;padding:4px 0;text-align:left;color:#292929}
-.faq-q .arr{width:36px;height:36px;border-radius:50%;background:#f0f0f0;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;transition:.2s}
+.faq-item{border-bottom:1px solid #ddd;padding:16px 0}
+.faq-q{font-size:16px;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center;width:100%;background:none;border:none;padding:4px 0;text-align:left;color:#292929}
+.faq-q .arr{width:34px;height:34px;border-radius:50%;background:#f0f0f0;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;transition:.2s}
 .faq-q:hover .arr{background:#ff6500;color:#fff}
-.faq-a{padding-top:10px;font-family:Arial,sans-serif;font-size:14px;color:#555;line-height:1.7;display:none}
+.faq-a{padding-top:8px;font-family:Arial,sans-serif;font-size:14px;color:#555;line-height:1.6;display:none}
 .faq-a.open{display:block}
 
-/* CONTACT */
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:900px;margin:0 auto}
-.contact-info p{font-family:Arial,sans-serif;font-size:16px;line-height:1.8;color:#ccc;margin-bottom:4px}
-.contact-info .big{font-size:20px;font-weight:700;color:#fff}
-.contact-form input,.contact-form textarea{width:100%;padding:13px 15px;margin-bottom:12px;border:1px solid #444;border-radius:8px;font-size:14px;background:transparent;color:#fff;font-family:Arial,sans-serif}
+/* ===== CONTACT ===== */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:36px;max-width:880px;margin:0 auto}
+.contact-info p{font-family:Arial,sans-serif;font-size:15px;line-height:1.8;color:#ccc;margin-bottom:3px}
+.contact-info .big{font-size:19px;font-weight:700;color:#fff}
+.contact-form input,.contact-form textarea{width:100%;padding:12px 14px;margin-bottom:12px;border:1px solid #444;border-radius:8px;font-size:14px;background:transparent;color:#fff;font-family:Arial,sans-serif}
 .contact-form input::placeholder,.contact-form textarea::placeholder{color:#777}
-.contact-form textarea{height:90px;resize:vertical}
+.contact-form textarea{height:80px;resize:vertical}
 
-/* FOOTER */
-.footer{background:#292929;padding:36px 0;text-align:center;border-top:1px solid #333}
+/* ===== FOOTER ===== */
+.footer{background:#292929;padding:32px 0;text-align:center;border-top:1px solid #333}
 .footer p{color:#888;font-size:13px;font-family:Arial,sans-serif;line-height:1.8}
 .footer a{color:#ff6500}
 
-/* TELEGRAM */
-.tg-btn{position:fixed;bottom:20px;right:20px;z-index:9999;display:inline-flex;align-items:center;gap:8px;background:#ff6500;color:#fff;padding:13px 22px;border-radius:30px;font-family:Arial,sans-serif;font-size:14px;font-weight:600;box-shadow:0 4px 15px rgba(0,0,0,0.25);transition:transform .2s}
+/* ===== TELEGRAM ===== */
+.tg-btn{position:fixed;bottom:20px;right:20px;z-index:9999;display:inline-flex;align-items:center;gap:8px;background:#ff6500;color:#fff;padding:12px 20px;border-radius:30px;font-family:Arial,sans-serif;font-size:14px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,0.2);transition:transform .2s}
 .tg-btn:hover{transform:scale(1.05)}
 
-/* RESPONSIVE */
+/* ===== RESPONSIVE ===== */
 @media(max-width:768px){
-  .nav-links{display:none;width:100%;flex-direction:column;padding:14px 0;gap:10px}
-  .nav-links.show{display:flex}
+  .nav-left,.nav-right{display:none;width:100%;flex-direction:column;padding:10px 0;gap:8px}
+  .nav-left.show,.nav-right.show{display:flex}
   .hamburger{display:block}
-  .hero h1{font-size:30px}
+  .hero h1{font-size:28px}
   .hero p{font-size:15px}
-  .section-title{font-size:26px}
-  .about,.adv-grid,.models,.contact{grid-template-columns:1fr}
-  .about-gallery{grid-template-columns:1fr}
-  .specs p{font-size:17px}
-  .model-card .model-img{height:200px}
-  .config-frame{height:480px}
+  .section-title{font-size:24px}
+  .about,.adv,.models,.contact{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+  .specs p{font-size:16px}
+  .config-wrap iframe{height:1200px}
 }
 </style>
 </head>
 <body>
 
+<!-- ===== NAV ===== -->
 <nav class="nav">
   <div class="container nav-inner">
-    <img src="assets/images/logo.png" alt="FOLLOFEY" style="height:36px;border-radius:50%">
-    <button class="hamburger" onclick="document.getElementById('menu').classList.toggle('show')" aria-label="Меню">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="menu">
+    <ul class="nav-left" id="menuL">
       <li><a href="#about">О бренде</a></li>
       <li><a href="#adv">Преимущества</a></li>
+    </ul>
+    <div class="nav-center">
+      <div class="brand">FOLLOFEY</div>
+      <div class="sub">CAMPER</div>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-right" id="menuR">
       <li><a href="#models">Модели</a></li>
       <li><a href="#faq">Вопросы</a></li>
       <li><a href="#contact">Контакты</a></li>
@@ -142,16 +149,18 @@ a{color:inherit;text-decoration:none}
   </div>
 </nav>
 
+<!-- ===== HERO ===== -->
 <section class="hero">
-  <img src="assets/images/hero-bg.jpg" alt="FOLLOFEY — оранжевый пикап на холме">
-  <div class="overlay"></div>
+  <img src="assets/images/hero-bg.jpg" alt="FOLLOFEY">
+  <div class="hero-gradient"></div>
   <div class="hero-content">
     <h1>Дом, который всегда с тобой</h1>
     <p>Жилые модули для пикапов. Свобода путешествовать с комфортом.</p>
-    <a href="#models" class="btn" style="font-size:16px;padding:16px 50px">Выбрать модуль</a>
+    <a href="#models" class="btn" style="font-size:15px;padding:15px 48px">Выбрать модуль</a>
   </div>
 </section>
 
+<!-- ===== SPECS BANNER ===== -->
 <div class="section-white" style="padding-top:0">
   <div class="container">
     <div class="specs">
@@ -162,34 +171,37 @@ a{color:inherit;text-decoration:none}
   </div>
 </div>
 
+<!-- ===== ABOUT ===== -->
 <section class="section section-white" id="about">
   <div class="container">
     <h2 class="section-title">О бренде <span>FOLLOFEY</span></h2>
-    <p class="section-desc">Специализируется на производстве съёмных жилых модулей для пикапов. Модули проходят испытания и адаптированы к температуре от −30&nbsp;°C до +45&nbsp;°C.</p>
-    <div class="about-gallery">
-      <img src="assets/images/img1.JPG" alt="FOLLOFEY roof">
+    <p class="section-desc">Специализируется на производстве съёмных жилых модулей для пикапов. Модули проходят испытания и адаптированы к температуре от −30 °C до +45 °C. Контроль качества на каждом этапе.</p>
+    <div class="about-grid">
+      <img src="assets/images/img1.JPG" alt="FOLLOFEY roof tent">
       <img src="assets/images/img2.JPG" alt="FOLLOFEY panel">
-      <img src="assets/images/img3.JPG" alt="FOLLOFEY interior">
-      <img src="assets/images/img4.JPG" alt="FOLLOFEY control" class="wide">
+      <img src="assets/images/img3.JPG" alt="FOLLOFEY water heater">
+      <img src="assets/images/img4.JPG" alt="FOLLOFEY interior" class="full">
     </div>
   </div>
 </section>
 
+<!-- ===== ADVANTAGES ===== -->
 <section class="section section-dark" id="adv">
   <div class="container">
     <h2 class="section-title">Преимущества <span>FOLLOFEY</span></h2>
     <p class="section-desc">Узнайте, почему жилые модули FOLLOFEY — идеальный выбор для автотуризма.</p>
-    <div class="adv-grid">
+    <div class="adv">
       <div class="adv-item"><div class="adv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div><h3>Адаптация к российскому климату</h3><p>Утеплённые сэндвич-панели для комфорта в любых погодных условиях.</p></div></div>
-      <div class="adv-item"><div class="adv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div><h3>Прочная конструкция</h3><p>Алюминиево-магниевый каркас и стеклопластик для надёжности и долговечности.</p></div></div>
-      <div class="adv-item"><div class="adv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div><h3>Без регистрации в ГИБДД</h3><p>Сменный кузов — код ТН ВЭД 8708, не облагается утильсбором.</p></div></div>
-      <div class="adv-item"><div class="adv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div><h3>Полная автономность</h3><p>Солнечная панель и аккумулятор в базовом исполнении.</p></div></div>
+      <div class="adv-item"><div class="adv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div><h3>Прочная конструкция</h3><p>Алюминиево-магниевый каркас и стеклопластик для надёжности.</p></div></div>
+      <div class="adv-item"><div class="adv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div><h3>Без регистрации в ГИБДД</h3><p>Код ТН ВЭД 8708. Сменный кузов — не облагается утильсбором.</p></div></div>
+      <div class="adv-item"><div class="adv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div><h3>Полная автономность</h3><p>Солнечная панель и аккумулятор уже в базовом исполнении.</p></div></div>
       <div class="adv-item"><div class="adv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div><h3>Лучшая цена в сегменте</h3><p>На 15–30% ниже аналогов при сопоставимом качестве.</p></div></div>
-      <div class="adv-item"><div class="adv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div><h3>Температура до −30 °C</h3><p>Толщина стенок 24–34 мм для сурового климата.</p></div></div>
+      <div class="adv-item"><div class="adv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div><h3>Температура до −30 °C</h3><p>Толщина стенок 24–34 мм для эксплуатации в суровом климате.</p></div></div>
     </div>
   </div>
 </section>
 
+<!-- ===== MODELS + CONFIG ===== -->
 <section class="section section-white" id="models">
   <div class="container">
     <h2 class="section-title">Наши <span>модели</span></h2>
@@ -201,9 +213,7 @@ a{color:inherit;text-decoration:none}
           <h3>FOLLOFEY A3</h3>
           <p>Компактный модуль для путешествий вдвоём. Всё необходимое в минималистичном исполнении.</p>
           <div class="price">895 000 ₽</div>
-          <div class="model-btns">
-            <a href="https://t.me/FOLLOFEY" class="btn">Узнать больше</a>
-          </div>
+          <a href="https://t.me/FOLLOFEY" class="btn">Узнать больше</a>
         </div>
       </div>
       <div class="model-card">
@@ -220,30 +230,29 @@ a{color:inherit;text-decoration:none}
       </div>
     </div>
     <div class="config-wrap">
-      <h3>Конфигуратор</h3>
-      <div class="config-frame">
-        <iframe src="https://follofey.ru/tab-configure" title="Конфигуратор"></iframe>
-      </div>
+      <iframe src="https://anzaya.github.io/follofey-configurator/" title="Конфигуратор FOLLOFEY"></iframe>
     </div>
   </div>
 </section>
 
-<section class="section" style="background:#f9f9f9" id="faq">
+<!-- ===== FAQ ===== -->
+<section class="section section-white" style="background:#f9f9f9" id="faq">
   <div class="container">
     <h2 class="section-title">Часто задаваемые <span>вопросы</span></h2>
-    <p class="section-desc">Ответы на самые популярные вопросы.</p>
+    <p class="section-desc">Ответы на самые популярные вопросы о наших модулях.</p>
     <div class="faq">
-      <div class="faq-item"><button class="faq-q" onclick="t(this)">Какие сроки изготовления?<span class="arr">+</span></button><div class="faq-a">30–45 рабочих дней с момента предоплаты. Срок зависит от загрузки производства и выбранных опций.</div></div>
-      <div class="faq-item"><button class="faq-q" onclick="t(this)">Можно ли установить на любой пикап?<span class="arr">+</span></button><div class="faq-a">Модули совместимы с большинством пикапов на российском рынке. Уточните совместимость у менеджера.</div></div>
-      <div class="faq-item"><button class="faq-q" onclick="t(this)">Какие опции доступны?<span class="arr">+</span></button><div class="faq-a">Дополнительная солнечная панель, увеличенный аккумулятор, внешний душ, маркиза, багажный отсек и другие. Полный список у менеджера.</div></div>
-      <div class="faq-item"><button class="faq-q" onclick="t(this)">Есть ли гарантия?<span class="arr">+</span></button><div class="faq-a">1 год на корпус, 6 месяцев на внутреннее оборудование. Гарантия на производственные дефекты.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="t(this)">Какие сроки изготовления?<span class="arr">+</span></button><div class="faq-a">Стандартный срок — 30–45 рабочих дней с момента предоплаты. Зависит от загрузки производства.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="t(this)">Можно ли установить на любой пикап?<span class="arr">+</span></button><div class="faq-a">Модули совместимы с большинством пикапов на российском рынке. Уточните у менеджера.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="t(this)">Какие опции доступны?<span class="arr">+</span></button><div class="faq-a">Дополнительная солнечная панель, увеличенный аккумулятор, внешний душ, маркиза и другие. Полный список у менеджера.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="t(this)">Есть ли гарантия?<span class="arr">+</span></button><div class="faq-a">1 год на корпус, 6 месяцев на внутреннее оборудование.</div></div>
       <div class="faq-item"><button class="faq-q" onclick="t(this)">Можно ли в кредит или рассрочку?<span class="arr">+</span></button><div class="faq-a">Да, сотрудничаем с банками. Условия обсуждаются индивидуально.</div></div>
-      <div class="faq-item"><button class="faq-q" onclick="t(this)">Сложно ли установить?<span class="arr">+</span></button><div class="faq-a">Два человека справятся за 30 минут. В комплекте четыре «ноги» для подъёма и люки для крепления.</div></div>
-      <div class="faq-item"><button class="faq-q" onclick="t(this)">Лизинг для юрлиц?<span class="arr">+</span></button><div class="faq-a">Пока нет, но ищем банк-партнёра.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="t(this)">Сложно ли установить самостоятельно?<span class="arr">+</span></button><div class="faq-a">Два человека справятся за 30 минут. В комплекте четыре опоры и люки для крепления.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="t(this)">Лизинг для юридических лиц?<span class="arr">+</span></button><div class="faq-a">Пока нет, но мы ищем банк-партнёра.</div></div>
     </div>
   </div>
 </section>
 
+<!-- ===== CONTACT ===== -->
 <section class="section section-dark" id="contact">
   <div class="container">
     <h2 class="section-title"><span>Контакты</span></h2>
@@ -253,7 +262,7 @@ a{color:inherit;text-decoration:none}
         <p class="big">+7 (904) 148-11-03</p>
         <p class="big">sales@follofey.ru</p>
         <p style="margin-top:10px"><strong>г. Иркутск, ст. Горка 5</strong></p>
-        <p style="margin-top:18px">Свяжитесь с нами — поможем подобрать модуль и рассчитать стоимость.</p>
+        <p style="margin-top:16px">Свяжитесь с нами — поможем подобрать модуль и рассчитать стоимость.</p>
       </div>
       <form class="contact-form" action="https://formspree.io/f/xblgqqwj" method="POST">
         <input type="email" name="Email" placeholder="Ваш Email" required>
@@ -265,9 +274,10 @@ a{color:inherit;text-decoration:none}
   </div>
 </section>
 
+<!-- ===== FOOTER ===== -->
 <footer class="footer">
   <div class="container">
-    <p style="font-size:15px;font-weight:700;color:#fff">ООО «Фоллофи»</p>
+    <p style="font-size:14px;font-weight:700;color:#fff;margin-bottom:2px">ООО «Фоллофи»</p>
     <p>© Все права защищены</p>
     <p><a href="mailto:info@follofey.ru">info@follofey.ru</a></p>
   </div>
@@ -277,7 +287,8 @@ a{color:inherit;text-decoration:none}
 
 <script>
 function t(b){var a=b.nextElementSibling,c=b.querySelector('.arr');a.classList.toggle('open');c.textContent=a.classList.contains('open')?'−':'+'}
-document.getElementById('menu').querySelectorAll('a').forEach(function(l){l.addEventListener('click',function(){document.getElementById('menu').classList.remove('show')})})
+function toggleMenu(){document.getElementById('menuL').classList.toggle('show');document.getElementById('menuR').classList.toggle('show')}
+document.querySelectorAll('#menuL a, #menuR a').forEach(function(l){l.addEventListener('click',function(){document.getElementById('menuL').classList.remove('show');document.getElementById('menuR').classList.remove('show')})})
 </script>
 </body>
 </html>
