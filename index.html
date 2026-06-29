@@ -3,159 +3,151 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FOLLOFEY — внедорожные колёсные модули для пикапов</title>
+<title>FOLLOFEY — дом, который всегда с тобой</title>
 <meta name="description" content="Съёмные жилые модули для пикапов FOLLOFEY. Алюминиево-магниевый каркас, сэндвич-панели, полная автономность. Цена от 895 000 ₽. Доставка по РФ. Без регистрации в ГИБДД.">
-<meta property="og:title" content="FOLLOFEY — дом, который всегда с тобой">
-<meta property="og:description" content="Внедорожные жилые модули для пикапов. Лёгкие, прочные, доступные. Цена от 895 000 ₽.">
-<meta property="og:image" content="assets/img/hero.jpg">
-<meta property="og:type" content="website">
 <meta property="og:url" content="https://anzaya.github.io/follofey-site/">
+<meta property="og:title" content="FOLLOFEY — дом, который всегда с тобой">
+<meta property="og:description" content="Съёмные жилые модули для пикапов. Алюминиево-магниевый каркас, сэндвич-панели. Цена от 895 000 ₽. Без регистрации в ГИБДД.">
+<meta property="og:image" content="https://anzaya.github.io/follofey-site/assets/img/hero.jpg">
+<meta property="og:type" content="website">
 <link rel="canonical" href="https://anzaya.github.io/follofey-site/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏕️</text></svg>">
 <style>
-:root { --primary: #ff6500; --primary-hover: #e55a00; --dark: #111; --darker: #0a0a0a; --card: #1a1a1a; --text: #e0e0e0; --muted: #888; }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--darker); color: var(--text); line-height: 1.6; }
+body { font-family: Georgia, 'Times New Roman', serif; color: #000; line-height: 1.6; background: #fff; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+a { color: inherit; text-decoration: none; }
 
-/* Navigation */
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(10,10,10,.95); backdrop-filter: blur(12px); border-bottom: 1px solid #222; }
-nav .container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-nav .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+/* Navigation — цвета и шрифт как на follofey.ru */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: #292929; border-bottom: 1px solid #3a3a3a; }
+nav .container { display: flex; align-items: center; justify-content: center; height: 60px; gap: 40px; position: relative; }
+nav .logo { position: absolute; left: 24px; display: flex; align-items: center; gap: 10px; }
 nav .logo img { height: 36px; width: auto; border-radius: 50%; }
-nav .logo span { font-size: 20px; font-weight: 700; color: #fff; letter-spacing: 1px; }
-nav .links { display: flex; gap: 24px; align-items: center; }
-nav .links a { color: #aaa; text-decoration: none; font-size: 14px; transition: color .2s; }
-nav .links a:hover { color: var(--primary); }
-.nav-cta { background: var(--primary); color: #fff !important; padding: 8px 20px; border-radius: 8px; font-weight: 600; font-size: 13px !important; }
-.nav-cta:hover { background: var(--primary-hover); }
-.burger { display: none; background: none; border: none; color: #fff; font-size: 28px; cursor: pointer; }
+nav .links { display: flex; gap: 32px; align-items: center; }
+nav .links a { color: #fff; font-size: 20px; font-weight: 600; transition: opacity .2s; font-family: Georgia, serif; }
+nav .links a:hover { opacity: .8; }
+nav .links a.cta { background: #ff6500; color: #fff; padding: 8px 24px; border-radius: 30px; font-size: 16px; font-weight: 600; }
+.burger { display: none; background: none; border: none; color: #fff; font-size: 28px; cursor: pointer; position: absolute; right: 24px; }
 
 /* Hero */
-.hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding-top: 80px; }
- .hero-bg { position: absolute; inset: 0; z-index: 0; }
- .hero-bg img { width: 100%; height: 100%; object-fit: cover; }
- .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,.3) 0%, rgba(0,0,0,.15) 100%); z-index: 1; }
+.hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding-top: 60px; }
+.hero-bg { position: absolute; inset: 0; z-index: 0; }
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6); }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,.4) 0%, rgba(0,0,0,.2) 100%); z-index: 1; }
 .hero .container { position: relative; z-index: 2; }
 .hero-content { max-width: 700px; }
-.hero h1 { font-size: 56px; font-weight: 800; line-height: 1.15; margin-bottom: 16px; }
-.hero h1 span { color: var(--primary); }
-.hero p { font-size: 18px; color: var(--muted); margin-bottom: 32px; max-width: 500px; }
-.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero h1 { font-size: 52px; font-weight: 700; color: #fff; margin-bottom: 20px; line-height: 1.2; font-family: Georgia, serif; }
+.hero p { font-size: 18px; color: rgba(255,255,255,.8); margin-bottom: 32px; max-width: 480px; line-height: 1.5; }
+.hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+.btn { display: inline-block; padding: 14px 36px; border-radius: 30px; font-size: 16px; font-weight: 600; font-family: Georgia, serif; transition: all .2s; }
+.btn-primary { background: #ff6500; color: #fff; }
+.btn-primary:hover { background: #e55a00; }
+.btn-outline { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.5); }
+.btn-outline:hover { border-color: #ff6500; }
 
-/* Buttons */
-.btn-primary { background: var(--primary); color: #fff; padding: 14px 36px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 16px; display: inline-block; transition: background .2s, transform .2s; }
-.btn-primary:hover { background: var(--primary-hover); transform: translateY(-1px); }
-.btn-secondary { background: transparent; color: #fff; padding: 14px 36px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 16px; display: inline-block; border: 1px solid #444; transition: border-color .2s, transform .2s; }
-.btn-secondary:hover { border-color: var(--primary); transform: translateY(-1px); }
+/* Секция О бренде */
+.section-about { padding: 100px 0 60px; background: #fff; }
+.section-about .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 40px; }
+.section-about .gallery img { width: 100%; border-radius: 15px; display: block; }
+.section-about .gallery .wide { grid-column: span 2; }
+.spec-block { background: #fff; padding: 40px; text-align: center; font-size: 26px; color: #000; border: none; line-height: 1.5; }
 
-/* Sections */
-section { padding: 100px 0; }
-.section-title { font-size: 36px; font-weight: 700; text-align: center; margin-bottom: 16px; }
-.section-title span { color: var(--primary); }
-.section-desc { text-align: center; color: var(--muted); font-size: 16px; max-width: 560px; margin: 0 auto 60px; }
-
-/* About - Construction Description */
-.construction-desc { background: var(--card); border: 1px solid #2a2a2a; border-radius: 12px; padding: 40px; margin-bottom: 60px; text-align: center; font-size: 26px; color: #fff; line-height: 1.4; }
-
-/* Photo Gallery */
-.gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 60px; }
-.gallery-grid img { width: 100%; border-radius: 12px; display: block; border: 1px solid #2a2a2a; }
-.gallery-grid .wide { grid-column: span 2; }
-
-/* Stats */
-.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: -40px; position: relative; z-index: 2; }
-.stat-card { background: var(--card); border: 1px solid #2a2a2a; border-radius: 12px; padding: 24px; text-align: center; }
-.stat-card .num { font-size: 32px; font-weight: 800; color: var(--primary); }
-.stat-card .label { font-size: 13px; color: var(--muted); margin-top: 4px; }
-
-/* Advantages */
-.advantages-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.adv-item { display: flex; gap: 16px; padding: 24px; background: var(--card); border: 1px solid #2a2a2a; border-radius: 12px; }
-.adv-icon { width: 30px; height: 30px; flex-shrink: 0; margin-top: 2px; }
+/* Преимущества — блок с тёмным фоном #292929, как на follofey.ru */
+.section-adv { padding: 100px 0; background: #292929; }
+.section-adv .section-title { color: #fff; font-size: 36px; font-family: Georgia, serif; text-align: center; margin-bottom: 16px; }
+.section-adv .section-desc { color: rgba(255,255,255,.8); text-align: center; font-size: 16px; max-width: 560px; margin: 0 auto 60px; font-family: Georgia, serif; }
+.adv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.adv-item { display: flex; gap: 16px; }
+.adv-icon { width: 30px; height: 30px; flex-shrink: 0; }
 .adv-icon svg { width: 100%; height: 100%; }
-.adv-text h3 { font-size: 16px; font-weight: 600; margin-bottom: 6px; color: #fff; }
-.adv-text p { font-size: 14px; color: var(--muted); line-height: 1.5; }
+.adv-text h3 { font-size: 16px; font-weight: 600; margin-bottom: 6px; color: #fff; font-family: Georgia, serif; }
+.adv-text p { font-size: 14px; color: rgba(255,255,255,.7); line-height: 1.5; font-family: Georgia, serif; }
 
-/* Models */
+/* Модели */
+.section-models { padding: 100px 0; background: #fff; }
+.section-models .section-title { color: #000; font-size: 36px; font-family: Georgia, serif; text-align: center; margin-bottom: 60px; }
 .models-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
-.model-card { background: var(--card); border: 1px solid #2a2a2a; border-radius: 16px; overflow: hidden; }
+.model-card { background: #fff; border: 1px solid #e0e0e0; border-radius: 16px; overflow: hidden; }
 .model-card img { width: 100%; height: 260px; object-fit: cover; display: block; }
 .model-body { padding: 28px; }
-.model-body h3 { font-size: 22px; font-weight: 700; margin-bottom: 12px; }
-.model-body h3 span { color: var(--primary); }
-.model-body .price { font-size: 28px; font-weight: 800; color: var(--primary); margin-bottom: 16px; }
+.model-body h3 { font-size: 22px; font-weight: 700; margin-bottom: 12px; font-family: Georgia, serif; }
+.model-body h3 span { color: #ff6500; }
+.model-body .price { font-size: 28px; font-weight: 700; color: #ff6500; margin-bottom: 16px; font-family: Georgia, serif; }
 .model-body ul { list-style: none; margin-bottom: 20px; }
-.model-body ul li { padding: 8px 0; border-bottom: 1px solid #222; font-size: 14px; color: #ccc; display: flex; align-items: center; gap: 10px; }
-.model-body ul li::before { content: "✓"; color: var(--primary); font-weight: 700; }
+.model-body ul li { padding: 8px 0; border-bottom: 1px solid #eee; font-size: 14px; color: #555; display: flex; align-items: center; gap: 10px; }
+.model-body ul li::before { content: "✓"; color: #ff6500; font-weight: 700; }
+.model-body .btn { width: 100%; text-align: center; }
 
-/* Configurator */
-.configurator-wrap { width: 100%; margin: 0 auto; border-radius: 16px; overflow: hidden; }
-.configurator-wrap iframe { width: 100%; height: 1850px; border: none; display: block; }
+/* Конфигуратор */
+.section-config { padding: 80px 0; background: #fff; }
+.section-config .section-title { color: #000; font-size: 36px; font-family: Georgia, serif; text-align: center; margin-bottom: 16px; }
+.section-config .section-desc { color: #666; text-align: center; font-size: 16px; margin-bottom: 40px; }
+.config-wrap { width: 100%; border-radius: 16px; overflow: hidden; border: 1px solid #e0e0e0; }
+.config-wrap iframe { width: 100%; height: 1850px; border: none; display: block; }
 
-/* FAQ */
+/* CTA блок */
+.cta-block { background: #ff6500; padding: 60px 0; text-align: center; }
+.cta-block h2 { font-size: 32px; font-weight: 700; color: #fff; margin-bottom: 12px; font-family: Georgia, serif; }
+.cta-block p { color: rgba(255,255,255,.9); margin-bottom: 24px; font-size: 16px; }
+.cta-block .btn-outline { border-color: rgba(255,255,255,.8); }
+
+/* FAQ — белый фон, чёрный текст */
+.section-faq { padding: 100px 0; background: #fff; }
+.section-faq .section-title { color: #000; font-size: 36px; font-family: Georgia, serif; text-align: center; margin-bottom: 60px; }
 .faq-list { max-width: 800px; margin: 0 auto; }
-.faq-item { border-top: 1px solid #333; padding: 0; }
-.faq-item:last-child { border-bottom: 1px solid #333; }
-.faq-q { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 20px 0; background: none; border: none; color: #fff; font-size: 16px; font-weight: 500; cursor: pointer; text-align: left; font-family: inherit; }
-.faq-q:hover { color: var(--primary); }
+.faq-item { border-top: 1px solid #ddd; }
+.faq-item:last-child { border-bottom: 1px solid #ddd; }
+.faq-q { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 20px 0; background: none; border: none; color: #000; font-size: 16px; font-weight: 500; cursor: pointer; text-align: left; font-family: Georgia, serif; }
+.faq-q:hover { color: #ff6500; }
 .faq-q .icon { width: 24px; height: 24px; transition: transform .3s; flex-shrink: 0; margin-left: 16px; }
-.faq-q .icon svg { width: 100%; height: 100%; stroke: var(--muted); }
+.faq-q .icon::after { content: '+'; font-size: 24px; color: #999; }
 .faq-q.active .icon { transform: rotate(45deg); }
 .faq-a { max-height: 0; overflow: hidden; transition: max-height .3s ease; }
-.faq-a-inner { padding: 0 0 20px; color: var(--muted); font-size: 14px; line-height: 1.6; }
+.faq-a-inner { padding: 0 0 20px; color: #555; font-size: 14px; line-height: 1.6; }
 
-/* Contact */
+/* Контакты — тёмный фон #292929 */
+.section-contact { padding: 100px 0; background: #292929; }
+.section-contact .section-title { color: #fff; font-size: 36px; font-family: Georgia, serif; text-align: center; margin-bottom: 16px; }
+.section-contact .section-desc { color: rgba(255,255,255,.8); text-align: center; margin-bottom: 60px; }
 .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
-.contact-info h3 { font-size: 22px; margin-bottom: 16px; }
-.contact-info .phone { font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 8px; }
-.contact-info .email { font-size: 18px; color: var(--primary); margin-bottom: 16px; }
-.contact-info .address { color: var(--muted); margin-bottom: 24px; }
-.social-links { display: flex; gap: 12px; }
-.social-links a { width: 40px; height: 40px; border-radius: 50%; background: var(--card); display: flex; align-items: center; justify-content: center; transition: background .2s; }
-.social-links a:hover { background: var(--primary); }
-
-/* Form */
-.form-wrap input, .form-wrap textarea { width: 100%; padding: 14px 16px; border-radius: 8px; border: 1px solid #333; background: var(--card); color: #fff; font-size: 14px; font-family: inherit; margin-bottom: 16px; outline: none; transition: border-color .2s; }
-.form-wrap input:focus, .form-wrap textarea:focus { border-color: var(--primary); }
-.form-wrap input::placeholder, .form-wrap textarea::placeholder { color: #666; }
+.contact-info { color: #fff; }
+.contact-info .phone { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+.contact-info .email { font-size: 18px; color: #ff6500; margin-bottom: 16px; }
+.contact-info .address { color: rgba(255,255,255,.7); margin-bottom: 24px; }
+.form-wrap input, .form-wrap textarea { width: 100%; padding: 14px 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,.2); background: transparent; color: #fff; font-size: 14px; font-family: Georgia, serif; margin-bottom: 16px; outline: none; }
+.form-wrap input:focus, .form-wrap textarea:focus { border-color: #ff6500; }
+.form-wrap input::placeholder, .form-wrap textarea::placeholder { color: rgba(255,255,255,.5); }
 .form-wrap textarea { height: 100px; resize: vertical; }
+.form-wrap .btn { width: 100%; text-align: center; border: none; cursor: pointer; }
 
 /* Footer */
-footer { text-align: center; padding: 60px 24px; border-top: 1px solid #222; }
-footer .logo-footer { width: 80px; border-radius: 50%; margin-bottom: 16px; }
+footer { padding: 60px 24px; background: #292929; text-align: center; border-top: 1px solid #3a3a3a; }
+footer .logo { width: 80px; border-radius: 50%; margin-bottom: 16px; }
 footer .company { font-size: 16px; font-weight: 600; color: #fff; margin-bottom: 8px; }
-footer .copy { color: var(--muted); font-size: 13px; }
-footer .copy a { color: var(--muted); }
+footer .copy { color: rgba(255,255,255,.6); font-size: 13px; }
+footer .copy a { color: rgba(255,255,255,.6); }
 
 /* Sticky CTA */
-.sticky-cta { position: fixed; bottom: 24px; right: 24px; z-index: 9999; display: flex; flex-direction: column; gap: 12px; }
-.sticky-cta a { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(0,0,0,.4); transition: transform .2s; text-decoration: none; }
+.sticky-cta { position: fixed; bottom: 24px; right: 24px; z-index: 9999; }
+.sticky-cta a { width: 56px; height: 56px; border-radius: 50%; background: #0088cc; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(0,0,0,.3); transition: transform .2s; text-decoration: none; }
 .sticky-cta a:hover { transform: scale(1.1); }
-.sticky-cta .tg { background: #0088cc; }
-.sticky-cta .wa { background: #25D366; }
 .sticky-cta a svg { width: 28px; height: 28px; fill: #fff; }
-
-/* Section background alternation */
-.bg-dark { background: var(--dark); }
 
 /* Mobile */
 @media (max-width: 768px) {
-  .burger { display: block; }
-  nav .links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: rgba(10,10,10,.98); flex-direction: column; padding: 20px; gap: 16px; border-bottom: 1px solid #222; }
+  nav .links { display: none; position: absolute; top: 60px; left: 0; right: 0; background: #292929; flex-direction: column; padding: 20px; gap: 16px; border-bottom: 1px solid #3a3a3a; }
   nav .links.open { display: flex; }
+  .burger { display: block; }
+  nav .logo { position: static; }
+  nav .container { justify-content: space-between; }
   .hero h1 { font-size: 32px; }
-  .hero p { font-size: 16px; }
-  .stats { grid-template-columns: 1fr 1fr; }
-  .advantages-grid { grid-template-columns: 1fr; }
+  .adv-grid { grid-template-columns: 1fr; }
   .models-grid { grid-template-columns: 1fr; }
   .contact-wrap { grid-template-columns: 1fr; }
-  .gallery-grid { grid-template-columns: 1fr; }
-  .gallery-grid .wide { grid-column: span 1; }
-  .construction-desc { font-size: 20px; padding: 24px; }
-  section { padding: 60px 0; }
-  .section-title { font-size: 28px; }
+  .section-about .gallery { grid-template-columns: 1fr; }
+  .section-about .gallery .wide { grid-column: span 1; }
+  .spec-block { font-size: 20px; padding: 24px; }
 }
 </style>
 </head>
@@ -166,74 +158,59 @@ footer .copy a { color: var(--muted); }
   <div class="container">
     <a href="/follofey-site/" class="logo">
       <img src="assets/img/logo.png" alt="FOLLOFEY">
-      <span>FOLLOFEY</span>
+      <span style="font-size:20px;font-weight:700;color:#fff;font-family:Georgia,serif;">FOLLOFEY</span>
     </a>
     <button class="burger" onclick="document.querySelector('nav .links').classList.toggle('open')">☰</button>
     <div class="links">
+      <a href="#home">Главная</a>
       <a href="#about">О бренде</a>
-      <a href="#advantages">Преимущества</a>
+      <a href="#adv">Преимущества</a>
       <a href="#models">Модели</a>
-      <a href="3d-tour.html">3D-тур</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact" class="nav-cta">Связаться</a>
+      <a href="#faq">Вопросы</a>
+      <a href="#contact" class="cta">Контакты</a>
     </div>
   </div>
 </nav>
 
 <!-- Hero -->
 <section class="hero" id="home">
-  <div class="hero-bg"><img src="assets/img/hero.jpg" alt="FOLLOFEY модуль"></div>
+  <div class="hero-bg"><img src="assets/img/hero.jpg" alt="FOLLOFEY"></div>
   <div class="hero-overlay"></div>
   <div class="container">
     <div class="hero-content">
-      <h1>Дом, который <span>всегда с тобой</span></h1>
-      <p>Съёмные жилые модули для пикапов. Лёгкие, прочные, автономные. Сделано в Китае для российских дорог.</p>
+      <h1>Дом, который<br>всегда с тобой</h1>
+      <p>Съёмные жилые модули для пикапов. Лёгкие, прочные, автономные. Сделано с заботой о ваших путешествиях.</p>
       <div class="hero-btns">
-        <a href="#models" class="btn-primary">Выбрать модель</a>
-        <a href="#contact" class="btn-secondary">Консультация</a>
+        <a href="#models" class="btn btn-primary">Выбрать модель</a>
+        <a href="#contact" class="btn btn-outline">Консультация</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Stats -->
-<div class="container" style="margin-top:-40px;position:relative;z-index:2;">
-  <div class="stats">
-    <div class="stat-card"><div class="num">3+</div><div class="label">года гарантии</div></div>
-    <div class="stat-card"><div class="num">895К</div><div class="label">цена от, ₽</div></div>
-    <div class="stat-card"><div class="num">30</div><div class="label">дней изготовление A3</div></div>
-    <div class="stat-card"><div class="num">0</div><div class="label">регистрация в ГИБДД</div></div>
-  </div>
-</div>
-
-<!-- About -->
-<section id="about">
+<!-- О бренде -->
+<section class="section-about" id="about">
   <div class="container">
-    <h2 class="section-title">О <span>бренде</span></h2>
-    <p class="section-desc">FOLLOFEY — российский бренд внедорожных колёсных модулей. Производство в Китае под контролем нашей команды.</p>
-
-    <!-- Gallery -->
-    <div class="gallery-grid">
-      <img src="assets/img/gallery1.jpg" alt="FOLLOFEY модуль вид снаружи" class="wide">
-      <img src="assets/img/gallery2.jpg" alt="FOLLOFEY модуль интерьер">
-      <img src="assets/img/gallery3.jpg" alt="FOLLOFEY модуль детали">
+    <h2 class="section-title" style="font-size:36px;font-family:Georgia,serif;text-align:center;margin-bottom:40px;color:#000;">О бренде</h2>
+    <div class="gallery">
+      <img src="assets/img/gallery1.jpg" alt="FOLLOFEY модуль" class="wide">
+      <img src="assets/img/gallery3.jpg" alt="FOLLOFEY модуль снаружи">
+      <img src="assets/img/gallery2.jpg" alt="FOLLOFEY интерьер">
     </div>
-
-    <!-- Construction description -->
-    <div class="construction-desc">
-      Корпус из сэндвич-панелей (стеклопластик + XPS + PP композит).<br>
+    <div class="spec-block">
+      «Корпус из сэндвич-панелей (стеклопластик + XPS + PP композит).<br>
       Алюминиево-магниевый каркас 6 серии. Толщина стенок 24-34 мм.<br>
-      Крыша — четырёхслойная мягкая, подъёмная.
+      Крыша — четырёхслойная мягкая, подъёмная.»
     </div>
   </div>
 </section>
 
-<!-- Advantages -->
-<section id="advantages" style="background:var(--card);">
+<!-- Преимущества -->
+<section class="section-adv" id="adv">
   <div class="container">
-    <h2 class="section-title">Преимущества <span>FOLLOFEY</span></h2>
+    <h2 class="section-title">Преимущества<br><strong>FOLLOFEY</strong></h2>
     <p class="section-desc">Узнайте, почему жилые модули FOLLOFEY — это идеальный выбор для вашего автотуризма.</p>
-    <div class="advantages-grid">
+    <div class="adv-grid">
       <div class="adv-item">
         <div class="adv-icon"><svg viewBox="0 0 30 30" fill="none"><circle cx="15" cy="15" r="12" stroke="#ff6500" stroke-width="2"/><path d="M10 15l3 3 7-7" stroke="#ff6500" stroke-width="2" stroke-linecap="round"/></svg></div>
         <div class="adv-text"><h3>Адаптация к российскому климату</h3><p>Утеплённые сэндвич-панели и другие решения для комфортной эксплуатации в любых погодных условиях.</p></div>
@@ -262,11 +239,10 @@ footer .copy a { color: var(--muted); }
   </div>
 </section>
 
-<!-- Models -->
-<section id="models">
+<!-- Модели -->
+<section class="section-models" id="models">
   <div class="container">
-    <h2 class="section-title">Модельный <span>ряд</span></h2>
-    <p class="section-desc">Выберите модуль под свои задачи. Обе модели совместимы с популярными пикапами.</p>
+    <h2 class="section-title">Модельный ряд</h2>
     <div class="models-grid">
       <div class="model-card">
         <img src="assets/img/gallery3.jpg" alt="FOLLOFEY A3">
@@ -281,7 +257,7 @@ footer .copy a { color: var(--muted); }
             <li>Солнечная панель 100 Вт</li>
             <li>Срок изготовления до 30 дней</li>
           </ul>
-          <a href="#contact" class="btn-primary" style="width:100%;text-align:center;">Заказать</a>
+          <a href="#contact" class="btn btn-primary">Заказать</a>
         </div>
       </div>
       <div class="model-card">
@@ -297,96 +273,66 @@ footer .copy a { color: var(--muted); }
             <li>Солнечная панель 200 Вт + доп. аккумулятор</li>
             <li>Срок изготовления до 45 дней</li>
           </ul>
-          <a href="#contact" class="btn-primary" style="width:100%;text-align:center;">Заказать</a>
+          <a href="#contact" class="btn btn-primary">Заказать</a>
         </div>
       </div>
-    </div>
-    <div style="text-align:center;margin-top:40px;">
-      <p style="color:var(--muted);margin-bottom:8px;">Не уверены, какая модель подходит?</p>
-      <a href="#contact" class="btn-secondary">Получить консультацию</a>
     </div>
   </div>
 </section>
 
-<!-- Configurator -->
-<section style="background:var(--card);">
+<!-- Конфигуратор -->
+<section class="section-config">
   <div class="container">
-    <h2 class="section-title">Конфигуратор <span>FOLLOFEY</span></h2>
+    <h2 class="section-title">Конфигуратор</h2>
     <p class="section-desc">Соберите свой идеальный модуль онлайн</p>
-    <div class="configurator-wrap">
+    <div class="config-wrap">
       <iframe src="https://anzaya.github.io/follofey-configurator/" loading="lazy"></iframe>
     </div>
   </div>
 </section>
 
-<!-- 3D Tour CTA -->
-<section style="background:linear-gradient(135deg, #1a1a1a, #0a0a0a);padding:60px 0;text-align:center;">
-  <div class="container">
-    <h2 style="font-size:32px;font-weight:700;margin-bottom:12px;">Посмотрите модуль <span style="color:var(--primary);">изнутри</span></h2>
-    <p style="color:var(--muted);margin-bottom:24px;">Виртуальный 3D-тур по внутреннему пространству FOLLOFEY A3 Max</p>
-    <a href="3d-tour.html" class="btn-primary">Открыть 3D-тур</a>
-  </div>
-</section>
+<!-- CTA -->
+<div class="cta-block">
+  <h2>Готовы к путешествиям?</h2>
+  <p>Свяжитесь с нами — обсудим конфигурацию и сроки</p>
+  <a href="#contact" class="btn btn-outline">Связаться</a>
+</div>
 
 <!-- FAQ -->
-<section id="faq" style="background:var(--card);">
+<section class="section-faq" id="faq">
   <div class="container">
-    <h2 class="section-title">Вопросы и <span>ответы</span></h2>
+    <h2 class="section-title">Вопросы:</h2>
     <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Нужно ли регистрировать жилой модуль в ГИБДД?<span class="icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19" stroke-width="2"/><line x1="5" y1="12" x2="19" y2="12" stroke-width="2"/></svg></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Нет, не нужно. Наши модули классифицируются как сменные кузова (код ТН ВЭД 8708). Они не имеют собственного шасси и VIN-номера, поэтому регистрация в ГИБДД не требуется. Вам не нужно получать ОТТС или проходить техосмотр.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Можно ли установить модуль на любой пикап?<span class="icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19" stroke-width="2"/><line x1="5" y1="12" x2="19" y2="12" stroke-width="2"/></svg></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Да, модуль совместим с популярными моделями пикапов, такими как Toyota Hilux, Ford Ranger, Great Wall Poer и другими.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Какие условия гарантии предоставляются?<span class="icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19" stroke-width="2"/><line x1="5" y1="12" x2="19" y2="12" stroke-width="2"/></svg></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Гарантия на корпус модуля — 3 года. Гарантия на встраиваемое оборудование (аккумуляторы, инверторы, отопители) — 12 месяцев.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Сколько времени занимает изготовление модуля?<span class="icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19" stroke-width="2"/><line x1="5" y1="12" x2="19" y2="12" stroke-width="2"/></svg></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Для модели A3 — до 30 дней. Для модели A3 Max — до 45 дней. Срок отсчитывается с момента получения предоплаты 50%.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Цена указана с НДС?<span class="icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19" stroke-width="2"/><line x1="5" y1="12" x2="19" y2="12" stroke-width="2"/></svg></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Да. Это официальная продажа через ООО с полным пакетом документов и выделенным НДС.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Можно ли купить модуль в лизинг?<span class="icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19" stroke-width="2"/><line x1="5" y1="12" x2="19" y2="12" stroke-width="2"/></svg></span></button>
-        <div class="faq-a"><div class="faq-a-inner">К сожалению пока нет, но мы ищем банк-партнёра.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Сложно ли установить модуль самостоятельно?<span class="icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19" stroke-width="2"/><line x1="5" y1="12" x2="19" y2="12" stroke-width="2"/></svg></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Нет, не сложно. Два человека справятся в течение 30 минут. В комплекте поставляются четыре «ноги» для поднятия модуля на необходимую высоту. Есть люки для крепления модуля к кузову.</div></div>
-      </div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Нужно ли регистрировать жилой модуль в ГИБДД?<span class="icon"></span></button><div class="faq-a"><div class="faq-a-inner">Нет, не нужно. Наши модули классифицируются как сменные кузова (код ТН ВЭД 8708). Они не имеют собственного шасси и VIN-номера, поэтому регистрация в ГИБДД не требуется. Вам не нужно получать ОТТС или проходить техосмотр.</div></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Можно ли установить модуль на любой пикап?<span class="icon"></span></button><div class="faq-a"><div class="faq-a-inner">Да, модуль совместим с популярными моделями пикапов, такими как Toyota Hilux, Ford Ranger, Great Wall Poer и другими.</div></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Какие условия гарантии предоставляются?<span class="icon"></span></button><div class="faq-a"><div class="faq-a-inner">Гарантия на корпус модуля — 3 года. Гарантия на встраиваемое оборудование (аккумуляторы, инверторы, отопители) — 12 месяцев.</div></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Сколько времени занимает изготовление модуля?<span class="icon"></span></button><div class="faq-a"><div class="faq-a-inner">Для модели A3 — до 30 дней. Для модели A3 Max — до 45 дней. Срок отсчитывается с момента получения предоплаты 50%.</div></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Цена указана с НДС?<span class="icon"></span></button><div class="faq-a"><div class="faq-a-inner">Да. Это официальная продажа через ООО с полным пакетом документов и выделенным НДС — 22%.</div></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Можно ли купить модуль в лизинг?<span class="icon"></span></button><div class="faq-a"><div class="faq-a-inner">К сожалению пока нет, но мы ищем банк-партнёра.</div></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Сложно ли установить модуль самостоятельно?<span class="icon"></span></button><div class="faq-a"><div class="faq-a-inner">Нет, не сложно. Два человека справятся в течение 30 минут. В комплекте поставляются четыре «ноги» для поднятия модуля на необходимую высоту. Есть люки для крепления модуля к кузову.</div></div></div>
     </div>
   </div>
 </section>
 
-<!-- Contact -->
-<section class="form-section" id="contact">
+<!-- Контакты -->
+<section class="section-contact" id="contact">
   <div class="container">
-    <h2 class="section-title">Свяжитесь <span>с нами</span></h2>
+    <h2 class="section-title">Контакты</h2>
     <p class="section-desc">Мы создаём наш продукт с заботой о вас!</p>
     <div class="contact-wrap">
       <div class="contact-info">
-        <h3>Контакты</h3>
         <div class="phone">+7 (904) 148-11-03</div>
         <div class="email">sales@follofey.ru</div>
         <div class="address">г. Иркутск, ст. Горка 5</div>
-        <div style="margin-top:24px;">
-          <p style="color:#fff;margin-bottom:12px;">Мы в соцсетях:</p>
-          <a href="https://t.me/anzaya" target="_blank" style="color:var(--primary);font-weight:600;text-decoration:none;">Telegram</a>
-        </div>
+        <p style="margin-top:24px;color:rgba(255,255,255,.7);">Напишите нам в Telegram:</p>
+        <a href="https://t.me/anzaya" target="_blank" style="color:#ff6500;font-weight:600;font-size:18px;">@anzaya</a>
       </div>
       <div class="form-wrap">
         <form action="https://formspree.io/f/xkgnkjzg" method="POST">
           <input type="email" name="Email" placeholder="Ваш Email" required>
           <input type="text" name="Name" placeholder="Ваше имя" required>
           <textarea name="Message" placeholder="Ваш вопрос или комментарий" required></textarea>
-          <button type="submit" class="btn-primary" style="width:100%;border:none;cursor:pointer;">Отправить</button>
+          <button type="submit" class="btn btn-primary">Отправить</button>
         </form>
       </div>
     </div>
@@ -395,27 +341,23 @@ footer .copy a { color: var(--muted); }
 
 <!-- Sticky CTA -->
 <div class="sticky-cta">
-  <a href="https://t.me/anzaya" target="_blank" class="tg" aria-label="Telegram">
+  <a href="https://t.me/anzaya" target="_blank" aria-label="Telegram">
     <svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.127.007.49-.012.653-.11 1.02-.89 5.272-1.26 6.986-.16.726-.32 1.158-.537 1.378a1.44 1.44 0 0 1-.454.287c-.126.045-.293.033-.461.004-.378-.06-.65-.125-1.04-.223-.692-.174-1.497-.453-2.268-.863-1.45-.77-2.262-1.662-2.577-2.07a.84.84 0 0 1-.113-.177.368.368 0 0 1 .028-.345.684.684 0 0 1 .155-.177c.077-.053.387-.342.747-.658.63-.55.695-.617.727-.685a.366.366 0 0 0 .007-.272.81.81 0 0 0-.077-.167c-.105-.165-.256-.28-.683-.5-.357-.185-.648-.334-.827-.478-.207-.167-.303-.34-.289-.532.01-.113.056-.211.168-.336.264-.294 1.06-.751 2.093-1.098.835-.28 2.145-.613 2.94-.74.364-.058 1.016-.137 1.326-.115z"/></svg>
   </a>
 </div>
 
 <!-- Footer -->
 <footer>
-  <img src="assets/img/logo.png" alt="FOLLOFEY" class="logo-footer">
+  <img src="assets/img/logo.png" alt="FOLLOFEY" class="logo">
   <div class="company">ООО «Фоллофи»</div>
-  <div class="copy">© 2026 Все права защищены.<br><a href="mailto:info@follofey.ru">info@follofey.ru</a></div>
+  <div class="copy">© Все права защищены<br><a href="mailto:info@follofey.ru">info@follofey.ru</a></div>
 </footer>
 
 <script>
 function toggleFaq(btn) {
   btn.classList.toggle('active');
   const content = btn.nextElementSibling;
-  if (content.style.maxHeight) {
-    content.style.maxHeight = null;
-  } else {
-    content.style.maxHeight = content.scrollHeight + 'px';
-  }
+  content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px';
 }
 </script>
 </body>
