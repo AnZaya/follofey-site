@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FOLLOFEY — внедорожные колёсные модули для пикапов</title>
+<meta name="description" content="FOLLOFEY — лёгкие внедорожные модули для пикапов. Сделано в Китае. Цена от 895 000 ₽. Срок 30-45 дней. Гарантия 3 года.">
+<meta property="og:title" content="FOLLOFEY — дом, который всегда с тобой">
+<meta property="og:description" content="Внедорожные колёсные модули для пикапов. Лёгкие, прочные, доступные.">
+<meta property="og:image" content="assets/logo.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏕️</text></svg>">
+<style>
+  :root {
+    --primary: #ff6500;
+    --primary-hover: #e55a00;
+    --dark: #111;
+    --darker: #0a0a0a;
+    --card: #1a1a1a;
+    --text: #e0e0e0;
+    --muted: #888;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--darker);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* Navigation */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(10,10,10,.95); backdrop-filter: blur(12px);
+    border-bottom: 1px solid #222; padding: 0 24px;
+  }
+  nav .container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  nav .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  nav .logo img { height: 32px; width: auto; }
+  nav .logo span { font-size: 20px; font-weight: 700; color: #fff; letter-spacing: 1px; }
+  nav .links { display: flex; gap: 24px; align-items: center; }
+  nav .links a { color: #aaa; text-decoration: none; font-size: 14px; transition: color .2s; }
+  nav .links a:hover { color: var(--primary); }
+  .nav-cta {
+    background: var(--primary); color: #fff !important; padding: 8px 20px;
+    border-radius: 8px; font-weight: 600; font-size: 13px !important;
+  }
+  .nav-cta:hover { background: var(--primary-hover); color: #fff !important; }
+  .burger { display: none; background: none; border: none; color: #fff; font-size: 28px; cursor: pointer; }
+
+  /* Hero */
+  .hero {
+    min-height: 100vh; display: flex; align-items: center; position: relative;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0d0d0d 100%);
+    overflow: hidden; padding-top: 80px;
+  }
+  .hero::before {
+    content: ''; position: absolute; top: -50%; right: -30%;
+    width: 800px; height: 800px; background: radial-gradient(circle, rgba(255,101,0,.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero .container { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .hero h1 { font-size: 56px; font-weight: 800; line-height: 1.1; margin-bottom: 16px; }
+  .hero h1 span { color: var(--primary); }
+  .hero p { font-size: 18px; color: var(--muted); margin-bottom: 32px; max-width: 480px; }
+  .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--primary); color: #fff; padding: 14px 36px; border-radius: 10px;
+    text-decoration: none; font-weight: 600; font-size: 16px; display: inline-block;
+    transition: background .2s, transform .2s;
+  }
+  .btn-primary:hover { background: var(--primary-hover); transform: translateY(-1px); }
+  .btn-secondary {
+    background: transparent; color: #fff; padding: 14px 36px; border-radius: 10px;
+    text-decoration: none; font-weight: 600; font-size: 16px; display: inline-block;
+    border: 1px solid #444; transition: border-color .2s, transform .2s;
+  }
+  .btn-secondary:hover { border-color: var(--primary); transform: translateY(-1px); }
+  .hero-image { position: relative; }
+  .hero-image img { width: 100%; border-radius: 16px; }
+
+  /* Stats */
+  .stats {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+    margin-top: -40px; position: relative; z-index: 2;
+  }
+  .stat-card {
+    background: var(--card); border: 1px solid #2a2a2a; border-radius: 12px;
+    padding: 24px; text-align: center;
+  }
+  .stat-card .num { font-size: 32px; font-weight: 800; color: var(--primary); }
+  .stat-card .label { font-size: 13px; color: var(--muted); margin-top: 4px; }
+
+  /* Sections */
+  section { padding: 100px 0; }
+  .section-title {
+    font-size: 36px; font-weight: 700; text-align: center; margin-bottom: 16px;
+  }
+  .section-sub {
+    text-align: center; color: var(--muted); font-size: 16px;
+    max-width: 600px; margin: 0 auto 60px;
+  }
+
+  /* Advantages */
+  .advantages { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .adv-card {
+    background: var(--card); border: 1px solid #2a2a2a; border-radius: 14px;
+    padding: 32px 28px; transition: border-color .3s;
+  }
+  .adv-card:hover { border-color: var(--primary); }
+  .adv-card .icon { font-size: 36px; margin-bottom: 16px; }
+  .adv-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+  .adv-card p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+  /* Models */
+  .models-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .model-card {
+    background: var(--card); border: 1px solid #2a2a2a; border-radius: 16px; overflow: hidden;
+    transition: border-color .3s, transform .3s;
+  }
+  .model-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+  .model-img { width: 100%; height: 260px; background: #222; background-size: cover; background-position: center; }
+  .model-body { padding: 24px; }
+  .model-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+  .model-name { font-size: 22px; font-weight: 700; }
+  .model-price { font-size: 22px; font-weight: 700; color: var(--primary); }
+  .model-desc { font-size: 14px; color: var(--muted); margin-bottom: 16px; }
+  .model-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .model-spec { font-size: 13px; color: #aaa; display: flex; align-items: center; gap: 6px; }
+  .model-spec::before { content: '✓'; color: #22c55e; font-weight: 700; }
+
+  /* Options section */
+  .options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .opt-item {
+    background: rgba(255,255,255,.06); border: 1px solid #2a2a2a; border-radius: 10px;
+    padding: 12px 16px; display: flex; align-items: center; gap: 12px;
+  }
+  .opt-price { color: var(--primary); font-weight: 700; white-space: nowrap; font-size: 14px; }
+  .opt-name { color: #ccc; font-size: 13px; }
+
+  /* Form */
+  .form-section {
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+  }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+  .form-info h2 { font-size: 36px; font-weight: 700; margin-bottom: 16px; }
+  .form-info p { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
+  .form-info .contact-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; font-size: 15px; color: #ccc; }
+  form { background: var(--card); border: 1px solid #2a2a2a; border-radius: 16px; padding: 32px; }
+  form input, form textarea {
+    width: 100%; background: #222; border: 1px solid #333; border-radius: 10px;
+    padding: 14px 16px; color: #fff; font-size: 15px; margin-bottom: 16px;
+    transition: border-color .2s;
+  }
+  form input:focus, form textarea:focus { outline: none; border-color: var(--primary); }
+  form button {
+    width: 100%; background: var(--primary); color: #fff; border: none;
+    padding: 16px; border-radius: 10px; font-size: 16px; font-weight: 600;
+    cursor: pointer; transition: background .2s;
+  }
+  form button:hover { background: var(--primary-hover); }
+
+  /* Footer */
+  footer {
+    background: #080808; border-top: 1px solid #1a1a1a; padding: 48px 0;
+    text-align: center;
+  }
+  footer img { height: 40px; margin-bottom: 16px; }
+  footer .company { font-size: 14px; font-weight: 600; color: #aaa; margin-bottom: 8px; }
+  footer .copy { font-size: 13px; color: #555; }
+  footer a { color: var(--primary); text-decoration: none; }
+
+  /* Fixed CTA */
+  .fixed-cta {
+    position: fixed; bottom: 0; left: 0; right: 0; background: rgba(10,10,10,.95);
+    backdrop-filter: blur(12px); border-top: 1px solid #222; padding: 14px 24px;
+    z-index: 999; display: none;
+  }
+  .fixed-cta .container { display: flex; align-items: center; justify-content: space-between; }
+  .fixed-cta .price-info { font-size: 13px; color: var(--muted); }
+  .fixed-cta .price-info strong { font-size: 24px; color: var(--primary); }
+  .fixed-cta a {
+    background: var(--primary); color: #fff; padding: 12px 32px; border-radius: 8px;
+    text-decoration: none; font-weight: 600; font-size: 14px;
+  }
+
+  @media(max-width:900px) {
+    .hero .container { grid-template-columns: 1fr; text-align: center; }
+    .hero h1 { font-size: 36px; }
+    .hero p { margin: 0 auto 32px; }
+    .hero-btns { justify-content: center; }
+    .stats { grid-template-columns: 1fr 1fr; margin-top: 0; }
+    .advantages { grid-template-columns: 1fr; }
+    .models-grid { grid-template-columns: 1fr; }
+    .form-grid { grid-template-columns: 1fr; }
+    nav .links { display: none; }
+    .burger { display: block; }
+    .fixed-cta { display: block; }
+  }
+  @media(max-width:600px) {
+    .stats { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .stat-card .num { font-size: 24px; }
+    .section-title { font-size: 28px; }
+    .options-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="#" class="logo">
+      <img src="assets/logo.png" alt="FOLLOFEY">
+      <span>FOLLOFEY</span>
+    </a>
+    <div class="links">
+      <a href="#about">О бренде</a>
+      <a href="#advantages">Преимущества</a>
+      <a href="#models">Модели</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="nav-cta">Связаться</a>
+    </div>
+    <button class="burger" onclick="document.querySelector('.links').style.display=document.querySelector('.links').style.display==='flex'?'none':'flex'" aria-label="Меню">☰</button>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div>
+      <h1>Ваш дом <span>везде,</span> куда ведёт дорога</h1>
+      <p>Лёгкие внедорожные колёсные модули для пикапов. Сделано в Китае. Доставка по всей России.</p>
+      <div class="hero-btns">
+        <a href="#models" class="btn-primary">Выбрать модель</a>
+        <a href="#contact" class="btn-secondary">Консультация</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="assets/_dsc9721.jpg" alt="FOLLOFEY модуль на пикапе" onerror="this.style.display='none'">
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<div class="container">
+  <div class="stats">
+    <div class="stat-card">
+      <div class="num">от 895 000 ₽</div>
+      <div class="label">Стартовая цена</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">30–45 дней</div>
+      <div class="label">Фиксированный срок</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">3 года</div>
+      <div class="label">Гарантия на корпус</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">от 300 кг</div>
+      <div class="label">Вес модуля</div>
+    </div>
+  </div>
+</div>
+
+<!-- About -->
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">О бренде FOLLOFEY</h2>
+    <p class="section-sub">Мы создаём лёгкие и надёжные модули для тех, кто выбирает свободу передвижения</p>
+    <div style="max-width:800px;margin:0 auto;text-align:center;">
+      <p style="font-size:16px;color:var(--muted);line-height:1.8;">
+        FOLLOFEY — китайский производитель внедорожных колёсных модулей для пикапов. Наша команда объединяет опыт автотуризма, инженерные решения и современные материалы. Каждый модуль проходит полную адаптацию для российских условий: русификация, розетки Schuko, усиленная теплоизоляция, подготовка к эксплуатации при −30°C.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Advantages -->
+<section id="advantages" style="background:var(--card);">
+  <div class="container">
+    <h2 class="section-title">Почему FOLLOFEY</h2>
+    <p class="section-sub">Конкурентные преимущества, которые выделяют нас на рынке</p>
+    <div class="advantages">
+      <div class="adv-card">
+        <div class="icon">⚡</div>
+        <h3>Цена на 15–30% ниже</h3>
+        <p>Прямое производство в Китае без посредников. Экономия без потери качества — от 895 000 ₽ за базовую модель.</p>
+      </div>
+      <div class="adv-card">
+        <div class="icon">🪶</div>
+        <h3>Самый лёгкий в сегменте</h3>
+        <p>Алюминиево-магниевый каркас и сэндвич-панели. Подходит для любых пикапов, включая среднеразмерные.</p>
+      </div>
+      <div class="adv-card">
+        <div class="icon">📅</div>
+        <h3>Фиксированные сроки</h3>
+        <p>30–45 дней от заказа до отгрузки. Никаких «индивидуальных сроков» — чёткое планирование.</p>
+      </div>
+      <div class="adv-card">
+        <div class="icon">❄️</div>
+        <h3>Полная адаптация к РФ</h3>
+        <p>Русификация, розетки Schuko, усиленная теплоизоляция, подготовка к −30°C. Всё включено.</p>
+      </div>
+      <div class="adv-card">
+        <div class="icon">🛡️</div>
+        <h3>Гарантия 3 года</h3>
+        <p>На корпус — 3 года. На комплектующие — 1 год. Реальное обязательство, а не маркетинг.</p>
+      </div>
+      <div class="adv-card">
+        <div class="icon">🔧</div>
+        <h3>25+ опций</h3>
+        <p>От литиевых аккумуляторов до навесов 270°. Соберите модуль под свои задачи.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Models -->
+<section id="models">
+  <div class="container">
+    <h2 class="section-title">Модельный ряд</h2>
+    <p class="section-sub">Выберите свою конфигурацию — от базового до максимального</p>
+
+    <div class="models-grid">
+      <!-- A3 -->
+      <div class="model-card">
+        <div class="model-img" style="background-image:url('assets/weixin_image_2026042.jpg')"></div>
+        <div class="model-body">
+          <div class="model-header">
+            <div class="model-name">A3</div>
+            <div class="model-price">895 000 ₽</div>
+          </div>
+          <div class="model-desc">Базовый модуль без выдвижных секций. На 3-х человек.</div>
+          <div class="model-specs">
+            <div class="model-spec">Корпус сэндвич-панели + XPS</div>
+            <div class="model-spec">Каркас алюминиево-магниевый</div>
+            <div class="model-spec">Цвет: чёрный, серый, белый</div>
+            <div class="model-spec">Мягкая открывающаяся крыша</div>
+            <div class="model-spec">Матрасы и подушки 50D</div>
+            <div class="model-spec">Задние алюминиевые кофры 2 шт</div>
+            <div class="model-spec">Аккумулятор гелевый 100 А·ч</div>
+            <div class="model-spec">Солнечная панель 160 Вт + MPPT</div>
+            <div class="model-spec">USB, 12V, LED освещение</div>
+            <div class="model-spec">Вытяжной вентилятор</div>
+            <div class="model-spec">Раковина, бак воды 55 л</div>
+            <div class="model-spec">Домкраты 4 шт</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- A3 Max -->
+      <div class="model-card">
+        <div class="model-img" style="background-image:url('assets/weixin_image_2026042.jpg')"></div>
+        <div class="model-body">
+          <div class="model-header">
+            <div class="model-name">A3 Max</div>
+            <div class="model-price">1 090 000 ₽</div>
+          </div>
+          <div class="model-desc">С двумя выдвижными слайдерами. Максимум пространства.</div>
+          <div class="model-specs">
+            <div class="model-spec">Корпус сэндвич-панели (4 слоя)</div>
+            <div class="model-spec">Каркас алюминиево-магниевый</div>
+            <div class="model-spec">Ширина на выбор: 175 см / 185 см</div>
+            <div class="model-spec">Выдвижные секции 2 шт (60 см)</div>
+            <div class="model-spec">Матрасы и подушки 50D</div>
+            <div class="model-spec">Задние алюминиевые кофры</div>
+            <div class="model-spec">Аккумулятор гелевый 100 А·ч</div>
+            <div class="model-spec">Солнечная панель 160 Вт + MPPT</div>
+            <div class="model-spec">USB, 12V, LED освещение</div>
+            <div class="model-spec">Вытяжной вентилятор</div>
+            <div class="model-spec">Раковина-кухня с баком 40 л</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Options A3 -->
+<section style="background:var(--primary);padding:60px 0;">
+  <div class="container">
+    <h2 style="font-size:28px;font-weight:700;text-align:center;color:#fff;margin-bottom:8px;">Доп. оборудование для A3</h2>
+    <p style="text-align:center;color:rgba(255,255,255,.8);margin-bottom:36px;">Расширьте возможности базового модуля</p>
+    <div class="options-grid">
+      <div class="opt-item"><span class="opt-price">105 000 ₽</span><span class="opt-name">Литий-аккумулятор 400 А·ч</span></div>
+      <div class="opt-item"><span class="opt-price">68 750 ₽</span><span class="opt-name">Инвертор 2000 Вт</span></div>
+      <div class="opt-item"><span class="opt-price">42 500 ₽</span><span class="opt-name">Зарядка от генератора</span></div>
+      <div class="opt-item"><span class="opt-price">52 500 ₽</span><span class="opt-name">Дизельный отопитель</span></div>
+      <div class="opt-item"><span class="opt-price">22 500 ₽</span><span class="opt-name">Водонагреватель 1500 Вт</span></div>
+      <div class="opt-item"><span class="opt-price">32 500 ₽</span><span class="opt-name">Холодильник 35л 2-зонный</span></div>
+      <div class="opt-item"><span class="opt-price">12 500 ₽</span><span class="opt-name">Влагостойкая мебель PVC</span></div>
+      <div class="opt-item"><span class="opt-price">22 500 ₽</span><span class="opt-name">Верхний вентилятор</span></div>
+      <div class="opt-item"><span class="opt-price">37 500 ₽</span><span class="opt-name">Внутренний душевой отсек</span></div>
+      <div class="opt-item"><span class="opt-price">57 500 ₽</span><span class="opt-name">Навес Dashu 2.5м</span></div>
+      <div class="opt-item"><span class="opt-price">70 000 ₽</span><span class="opt-name">Навес 270°</span></div>
+      <div class="opt-item"><span class="opt-price">12 500 ₽</span><span class="opt-name">Перфорированная панель</span></div>
+      <div class="opt-item"><span class="opt-price">12 500 ₽</span><span class="opt-name">Алюминиевый кофр</span></div>
+      <div class="opt-item"><span class="opt-price">150 000 ₽</span><span class="opt-name">Электроподъём крыши</span></div>
+      <div class="opt-item"><span class="opt-price">7 500 ₽</span><span class="opt-name">Тент парусиновый</span></div>
+    </div>
+
+    <h2 style="font-size:28px;font-weight:700;text-align:center;color:#fff;margin:40px 0 8px;">Доп. оборудование для A3 Max</h2>
+    <p style="text-align:center;color:rgba(255,255,255,.8);margin-bottom:36px;">Максимум комфорта для экспедиций</p>
+    <div class="options-grid">
+      <div class="opt-item"><span class="opt-price">32 500 ₽</span><span class="opt-name">Холодильник 35л</span></div>
+      <div class="opt-item"><span class="opt-price">22 500 ₽</span><span class="opt-name">Микроволновая печь</span></div>
+      <div class="opt-item"><span class="opt-price">52 500 ₽</span><span class="opt-name">Дизельный отопитель</span></div>
+      <div class="opt-item"><span class="opt-price">15 000 ₽</span><span class="opt-name">Складной стол</span></div>
+      <div class="opt-item"><span class="opt-price">130 000 ₽</span><span class="opt-name">Литий-аккумулятор 490 А·ч</span></div>
+      <div class="opt-item"><span class="opt-price">162 500 ₽</span><span class="opt-name">Литий-аккумулятор 600 А·ч</span></div>
+      <div class="opt-item"><span class="opt-price">78 750 ₽</span><span class="opt-name">Инвертор 3000 Вт</span></div>
+      <div class="opt-item"><span class="opt-price">42 500 ₽</span><span class="opt-name">Зарядка от генератора</span></div>
+      <div class="opt-item"><span class="opt-price">87 500 ₽</span><span class="opt-name">Кондиционер 12V</span></div>
+      <div class="opt-item"><span class="opt-price">22 500 ₽</span><span class="opt-name">Водонагреватель 1500 Вт</span></div>
+      <div class="opt-item"><span class="opt-price">12 500 ₽</span><span class="opt-name">Влагостойкая мебель PVC</span></div>
+      <div class="opt-item"><span class="opt-price">22 500 ₽</span><span class="opt-name">Верхний вентилятор</span></div>
+      <div class="opt-item"><span class="opt-price">37 500 ₽</span><span class="opt-name">Душевой отсек</span></div>
+      <div class="opt-item"><span class="opt-price">135 000 ₽</span><span class="opt-name">Навес 270° ADA</span></div>
+      <div class="opt-item"><span class="opt-price">12 500 ₽</span><span class="opt-name">Перфорированная панель</span></div>
+      <div class="opt-item"><span class="opt-price">25 000 ₽</span><span class="opt-name">Сдвижное окно 1200×300</span></div>
+      <div class="opt-item"><span class="opt-price">12 500 ₽</span><span class="opt-name">Алюминиевый кофр</span></div>
+      <div class="opt-item"><span class="opt-price">150 000 ₽</span><span class="opt-name">Электроподъём крыши</span></div>
+      <div class="opt-item"><span class="opt-price">7 500 ₽</span><span class="opt-name">Тент парусиновый</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="background:var(--card);">
+  <div class="container">
+    <h2 class="section-title">Часто задаваемые вопросы</h2>
+    <p class="section-sub">Ответы на главные вопросы о модулях FOLLOFEY</p>
+    <div style="max-width:700px;margin:0 auto;">
+      <details style="border-bottom:1px solid #2a2a2a;padding:20px 0;">
+        <summary style="font-size:16px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Какие пикапы подходят?
+          <span style="color:var(--primary);font-size:20px;">+</span>
+        </summary>
+        <p style="margin-top:12px;font-size:14px;color:var(--muted);line-height:1.7;">Модули FOLLOFEY подходят для большинства пикапов: Toyota Hilux, Mitsubishi L200, Ford Ranger, VW Amarok, Great Wall, UAZ Pickup и других. Вес модуля от 300 кг — подходит для любых рамных пикапов.</p>
+      </details>
+      <details style="border-bottom:1px solid #2a2a2a;padding:20px 0;">
+        <summary style="font-size:16px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Какие сроки изготовления и доставки?
+          <span style="color:var(--primary);font-size:20px;">+</span>
+        </summary>
+        <p style="margin-top:12px;font-size:14px;color:var(--muted);line-height:1.7;">Срок изготовления — 30–45 дней после подтверждения заказа. Доставка до границы РФ (DAP) — включена в стоимость. Внутри РФ — транспортной компанией за счёт покупателя.</p>
+      </details>
+      <details style="border-bottom:1px solid #2a2a2a;padding:20px 0;">
+        <summary style="font-size:16px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Есть ли сертификация?
+          <span style="color:var(--primary);font-size:20px;">+</span>
+        </summary>
+        <p style="margin-top:12px;font-size:14px;color:var(--muted);line-height:1.7;">Да, модули проходят сертификацию по ТР ТС 018/2011. Процесс занимает до 1 недели после ввоза модуля на территорию РФ.</p>
+      </details>
+      <details style="border-bottom:1px solid #2a2a2a;padding:20px 0;">
+        <summary style="font-size:16px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Какая гарантия?
+          <span style="color:var(--primary);font-size:20px;">+</span>
+        </summary>
+        <p style="margin-top:12px;font-size:14px;color:var(--muted);line-height:1.7;">3 года на корпус модуля, 1 год на комплектующие. Гарантийное обслуживание осуществляется через представительство в РФ.</p>
+      </details>
+      <details style="border-bottom:1px solid #2a2a2a;padding:20px 0;">
+        <summary style="font-size:16px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Можно ли заказать индивидуальную комплектацию?
+          <span style="color:var(--primary);font-size:20px;">+</span>
+        </summary>
+        <p style="margin-top:12px;font-size:14px;color:var(--muted);line-height:1.7;">Да. Вы можете выбрать из 25+ опций или обсудить индивидуальные пожелания — модули производятся под заказ с учётом ваших требований.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="form-section" id="contact">
+  <div class="container">
+    <div class="form-grid">
+      <div class="form-info">
+        <h2>Свяжитесь с нами</h2>
+        <p>Оставьте заявку — мы свяжемся с вами в ближайшее время, поможем выбрать конфигурацию и ответим на все вопросы.</p>
+        <div class="contact-row">📧 info@follofey.ru</div>
+        <div class="contact-row">📱 Telegram: @follofey</div>
+        <div class="contact-row">🌐 follofey.ru</div>
+        <p style="margin-top:24px;font-size:13px;color:#555;">ООО «Петстор» (ОСН). Реквизиты предоставляются по запросу.</p>
+      </div>
+      <form action="#" method="POST">
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="tel" name="phone" placeholder="Телефон" required>
+        <input type="email" name="email" placeholder="Email">
+        <textarea name="message" rows="4" placeholder="Какая модель интересует? Какие опции?"></textarea>
+        <button type="submit">Отправить заявку</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <img src="assets/logo.png" alt="FOLLOFEY" onerror="this.style.display='none'">
+    <div class="company">FOLLOFEY — внедорожные колёсные модули</div>
+    <div class="copy">© 2026 ООО «Фоллофи». Все права защищены.<br>
+    <a href="mailto:info@follofey.ru">info@follofey.ru</a></div>
+  </div>
+</footer>
+
+<!-- Fixed CTA -->
+<div class="fixed-cta">
+  <div class="container">
+    <div class="price-info">от <strong>895 000 ₽</strong></div>
+    <a href="#contact">Оставить заявку</a>
+  </div>
+</div>
+
+</body>
+</html>
