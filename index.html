@@ -1,364 +1,351 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>FOLLOFEY — дом, который всегда с тобой</title>
-<meta name="description" content="Съёмные жилые модули для пикапов FOLLOFEY. Алюминиево-магниевый каркас, сэндвич-панели, полная автономность. Цена от 895 000 ₽. Доставка по РФ. Без регистрации в ГИБДД.">
-<meta property="og:url" content="https://anzaya.github.io/follofey-site/">
-<meta property="og:title" content="FOLLOFEY — дом, который всегда с тобой">
-<meta property="og:description" content="Съёмные жилые модули для пикапов. Алюминиево-магниевый каркас, сэндвич-панели. Цена от 895 000 ₽. Без регистрации в ГИБДД.">
-<meta property="og:image" content="https://anzaya.github.io/follofey-site/assets/img/hero.jpg">
-<meta property="og:type" content="website">
-<link rel="canonical" href="https://anzaya.github.io/follofey-site/">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏕️</text></svg>">
-<style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { font-family: Georgia, 'Times New Roman', serif; color: #000; line-height: 1.6; background: #fff; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-a { color: inherit; text-decoration: none; }
+<meta property="og:url" content="https://anzaya.github.io/follofey-site/"/>
+<meta property="og:title" content="FOLLOFEY — дом, который всегда с тобой"/>
+<meta property="og:description" content="Съёмные жилые модули для пикапов. Алюминиево-магниевый каркас, сэндвич-панели. Цена от 895 000 ₽. Без регистрации в ГИБДД."/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://anzaya.github.io/follofey-site/assets/tilda/img/Weixin_Image_2026042.png"/>
+<link rel="canonical" href="https://anzaya.github.io/follofey-site/"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta http-equiv="x-dns-prefetch-control" content="on"/>
+<link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏕️</text></svg>"/>
 
-/* Navigation — цвета и шрифт как на follofey.ru */
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: #292929; border-bottom: 1px solid #3a3a3a; }
-nav .container { display: flex; align-items: center; justify-content: center; height: 60px; gap: 40px; position: relative; }
-nav .logo { position: absolute; left: 24px; display: flex; align-items: center; gap: 10px; }
-nav .logo img { height: 36px; width: auto; border-radius: 50%; }
-nav .links { display: flex; gap: 32px; align-items: center; }
-nav .links a { color: #fff; font-size: 20px; font-weight: 600; transition: opacity .2s; font-family: Georgia, serif; }
-nav .links a:hover { opacity: .8; }
-nav .links a.cta { background: #ff6500; color: #fff; padding: 8px 24px; border-radius: 30px; font-size: 16px; font-weight: 600; }
-.burger { display: none; background: none; border: none; color: #fff; font-size: 28px; cursor: pointer; position: absolute; right: 24px; }
+<!-- Local CSS -->
+<link rel="stylesheet" href="assets/tilda/css/tilda-grid-3.0.min.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="assets/tilda/css/tilda-blocks.min.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="assets/tilda/css/tilda-menusub-1.1.min.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="assets/tilda/css/tilda-menu-widgeticons-1.0.min.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="assets/tilda/css/tilda-menu-burger-1.0.min.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="assets/tilda/css/tilda-cover-1.0.min.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="assets/tilda/css/tilda-forms-1.0.min.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="assets/tilda/css/fonts-tildasans.css" type="text/css" media="all"/>
 
-/* Hero */
-.hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding-top: 60px; }
-.hero-bg { position: absolute; inset: 0; z-index: 0; }
-.hero-bg img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6); }
-.hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,.4) 0%, rgba(0,0,0,.2) 100%); z-index: 1; }
-.hero .container { position: relative; z-index: 2; }
-.hero-content { max-width: 700px; }
-.hero h1 { font-size: 52px; font-weight: 700; color: #fff; margin-bottom: 20px; line-height: 1.2; font-family: Georgia, serif; }
-.hero p { font-size: 18px; color: rgba(255,255,255,.8); margin-bottom: 32px; max-width: 480px; line-height: 1.5; }
-.hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
-.btn { display: inline-block; padding: 14px 36px; border-radius: 30px; font-size: 16px; font-weight: 600; font-family: Georgia, serif; transition: all .2s; }
-.btn-primary { background: #ff6500; color: #fff; }
-.btn-primary:hover { background: #e55a00; }
-.btn-outline { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.5); }
-.btn-outline:hover { border-color: #ff6500; }
+<!-- Local JS -->
+<script src="assets/tilda/js/tilda-fallback-1.0.min.js" charset="utf-8"></script>
+<script src="assets/tilda/js/tilda-polyfill-1.0.min.js" charset="utf-8"></script>
+<script src="assets/tilda/js/tilda-scripts-3.0.min.js" charset="utf-8" defer></script>
+<script src="assets/tilda/js/tilda-blocks.min.js" charset="utf-8" async></script>
+<script src="assets/tilda/js/tilda-lazyload-1.0.min.js" charset="utf-8" async></script>
+<script src="assets/tilda/js/tilda-menusub-1.1.min.js" charset="utf-8" async></script>
+<script src="assets/tilda/js/tilda-menu-1.1.min.js" charset="utf-8" async></script>
+<script src="assets/tilda/js/tilda-menu-widgeticons-1.0.min.js" charset="utf-8" async></script>
+<script src="assets/tilda/js/tilda-menu-burger-1.0.min.js" charset="utf-8" async></script>
+<script src="assets/tilda/js/tilda-cover-1.0.min.js" charset="utf-8" async></script>
+<script src="assets/tilda/js/tilda-paint-icons.min.js" charset="utf-8" async></script>
+<script src="assets/tilda/js/tilda-forms-1.0.min.js" charset="utf-8" async></script>
+<script src="assets/tilda/js/tilda-events-1.0.min.js" charset="utf-8" async></script>
 
-/* Секция О бренде */
-.section-about { padding: 100px 0 60px; background: #fff; }
-.section-about .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 40px; }
-.section-about .gallery img { width: 100%; border-radius: 15px; display: block; }
-.section-about .gallery .wide { grid-column: span 2; }
-.spec-block { background: #fff; padding: 40px; text-align: center; font-size: 26px; color: #000; border: none; line-height: 1.5; }
-
-/* Преимущества — блок с тёмным фоном #292929, как на follofey.ru */
-.section-adv { padding: 100px 0; background: #292929; }
-.section-adv .section-title { color: #fff; font-size: 36px; font-family: Georgia, serif; text-align: center; margin-bottom: 16px; }
-.section-adv .section-desc { color: rgba(255,255,255,.8); text-align: center; font-size: 16px; max-width: 560px; margin: 0 auto 60px; font-family: Georgia, serif; }
-.adv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.adv-item { display: flex; gap: 16px; }
-.adv-icon { width: 30px; height: 30px; flex-shrink: 0; }
-.adv-icon svg { width: 100%; height: 100%; }
-.adv-text h3 { font-size: 16px; font-weight: 600; margin-bottom: 6px; color: #fff; font-family: Georgia, serif; }
-.adv-text p { font-size: 14px; color: rgba(255,255,255,.7); line-height: 1.5; font-family: Georgia, serif; }
-
-/* Модели */
-.section-models { padding: 100px 0; background: #fff; }
-.section-models .section-title { color: #000; font-size: 36px; font-family: Georgia, serif; text-align: center; margin-bottom: 60px; }
-.models-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
-.model-card { background: #fff; border: 1px solid #e0e0e0; border-radius: 16px; overflow: hidden; }
-.model-card img { width: 100%; height: 260px; object-fit: cover; display: block; }
-.model-body { padding: 28px; }
-.model-body h3 { font-size: 22px; font-weight: 700; margin-bottom: 12px; font-family: Georgia, serif; }
-.model-body h3 span { color: #ff6500; }
-.model-body .price { font-size: 28px; font-weight: 700; color: #ff6500; margin-bottom: 16px; font-family: Georgia, serif; }
-.model-body ul { list-style: none; margin-bottom: 20px; }
-.model-body ul li { padding: 8px 0; border-bottom: 1px solid #eee; font-size: 14px; color: #555; display: flex; align-items: center; gap: 10px; }
-.model-body ul li::before { content: "✓"; color: #ff6500; font-weight: 700; }
-.model-body .btn { width: 100%; text-align: center; }
-
-/* Конфигуратор */
-.section-config { padding: 80px 0; background: #fff; }
-.section-config .section-title { color: #000; font-size: 36px; font-family: Georgia, serif; text-align: center; margin-bottom: 16px; }
-.section-config .section-desc { color: #666; text-align: center; font-size: 16px; margin-bottom: 40px; }
-.config-wrap { width: 100%; border-radius: 16px; overflow: hidden; border: 1px solid #e0e0e0; }
-.config-wrap iframe { width: 100%; height: 1850px; border: none; display: block; }
-
-/* CTA блок */
-.cta-block { background: #ff6500; padding: 60px 0; text-align: center; }
-.cta-block h2 { font-size: 32px; font-weight: 700; color: #fff; margin-bottom: 12px; font-family: Georgia, serif; }
-.cta-block p { color: rgba(255,255,255,.9); margin-bottom: 24px; font-size: 16px; }
-.cta-block .btn-outline { border-color: rgba(255,255,255,.8); }
-
-/* FAQ — белый фон, чёрный текст */
-.section-faq { padding: 100px 0; background: #fff; }
-.section-faq .section-title { color: #000; font-size: 36px; font-family: Georgia, serif; text-align: center; margin-bottom: 60px; }
-.faq-list { max-width: 800px; margin: 0 auto; }
-.faq-item { border-top: 1px solid #ddd; }
-.faq-item:last-child { border-bottom: 1px solid #ddd; }
-.faq-q { width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 20px 0; background: none; border: none; color: #000; font-size: 16px; font-weight: 500; cursor: pointer; text-align: left; font-family: Georgia, serif; }
-.faq-q:hover { color: #ff6500; }
-.faq-q .icon { width: 24px; height: 24px; transition: transform .3s; flex-shrink: 0; margin-left: 16px; }
-.faq-q .icon::after { content: '+'; font-size: 24px; color: #999; }
-.faq-q.active .icon { transform: rotate(45deg); }
-.faq-a { max-height: 0; overflow: hidden; transition: max-height .3s ease; }
-.faq-a-inner { padding: 0 0 20px; color: #555; font-size: 14px; line-height: 1.6; }
-
-/* Контакты — тёмный фон #292929 */
-.section-contact { padding: 100px 0; background: #292929; }
-.section-contact .section-title { color: #fff; font-size: 36px; font-family: Georgia, serif; text-align: center; margin-bottom: 16px; }
-.section-contact .section-desc { color: rgba(255,255,255,.8); text-align: center; margin-bottom: 60px; }
-.contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
-.contact-info { color: #fff; }
-.contact-info .phone { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
-.contact-info .email { font-size: 18px; color: #ff6500; margin-bottom: 16px; }
-.contact-info .address { color: rgba(255,255,255,.7); margin-bottom: 24px; }
-.form-wrap input, .form-wrap textarea { width: 100%; padding: 14px 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,.2); background: transparent; color: #fff; font-size: 14px; font-family: Georgia, serif; margin-bottom: 16px; outline: none; }
-.form-wrap input:focus, .form-wrap textarea:focus { border-color: #ff6500; }
-.form-wrap input::placeholder, .form-wrap textarea::placeholder { color: rgba(255,255,255,.5); }
-.form-wrap textarea { height: 100px; resize: vertical; }
-.form-wrap .btn { width: 100%; text-align: center; border: none; cursor: pointer; }
-
-/* Footer */
-footer { padding: 60px 24px; background: #292929; text-align: center; border-top: 1px solid #3a3a3a; }
-footer .logo { width: 80px; border-radius: 50%; margin-bottom: 16px; }
-footer .company { font-size: 16px; font-weight: 600; color: #fff; margin-bottom: 8px; }
-footer .copy { color: rgba(255,255,255,.6); font-size: 13px; }
-footer .copy a { color: rgba(255,255,255,.6); }
-
-/* Sticky CTA */
-.sticky-cta { position: fixed; bottom: 24px; right: 24px; z-index: 9999; }
-.sticky-cta a { width: 56px; height: 56px; border-radius: 50%; background: #0088cc; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(0,0,0,.3); transition: transform .2s; text-decoration: none; }
-.sticky-cta a:hover { transform: scale(1.1); }
-.sticky-cta a svg { width: 28px; height: 28px; fill: #fff; }
-
-/* Mobile */
-@media (max-width: 768px) {
-  nav .links { display: none; position: absolute; top: 60px; left: 0; right: 0; background: #292929; flex-direction: column; padding: 20px; gap: 16px; border-bottom: 1px solid #3a3a3a; }
-  nav .links.open { display: flex; }
-  .burger { display: block; }
-  nav .logo { position: static; }
-  nav .container { justify-content: space-between; }
-  .hero h1 { font-size: 32px; }
-  .adv-grid { grid-template-columns: 1fr; }
-  .models-grid { grid-template-columns: 1fr; }
-  .contact-wrap { grid-template-columns: 1fr; }
-  .section-about .gallery { grid-template-columns: 1fr; }
-  .section-about .gallery .wide { grid-column: span 1; }
-  .spec-block { font-size: 20px; padding: 24px; }
-}
-</style>
 </head>
-<body>
+<body class="t-body" style="margin:0;">
 
-<!-- Navigation -->
-<nav>
-  <div class="container">
-    <a href="/follofey-site/" class="logo">
-      <img src="assets/img/logo.png" alt="FOLLOFEY">
-      <span style="font-size:20px;font-weight:700;color:#fff;font-family:Georgia,serif;">FOLLOFEY</span>
-    </a>
-    <button class="burger" onclick="document.querySelector('nav .links').classList.toggle('open')">☰</button>
-    <div class="links">
-      <a href="#home">Главная</a>
-      <a href="#about">О бренде</a>
-      <a href="#adv">Преимущества</a>
-      <a href="#models">Модели</a>
-      <a href="#faq">Вопросы</a>
-      <a href="#contact" class="cta">Контакты</a>
-    </div>
-  </div>
-</nav>
+<div id="allrecords" class="t-records" data-hook="blocks-collection-content-node"
+  data-tilda-project-id="24484806" data-tilda-page-id="134955246"
+  data-tilda-formskey="377f6f776eef08abb43cbbc224484806"
+  data-tilda-cookie="no" data-tilda-lazy="yes"
+  data-tilda-root-zone="com" data-tilda-project-country="RU">
 
-<!-- Hero -->
-<section class="hero" id="home">
-  <div class="hero-bg"><img src="assets/img/hero.jpg" alt="FOLLOFEY"></div>
-  <div class="hero-overlay"></div>
-  <div class="container">
-    <div class="hero-content">
-      <h1>Дом, который<br>всегда с тобой</h1>
-      <p>Съёмные жилые модули для пикапов. Лёгкие, прочные, автономные. Сделано с заботой о ваших путешествиях.</p>
-      <div class="hero-btns">
-        <a href="#models" class="btn btn-primary">Выбрать модель</a>
-        <a href="#contact" class="btn btn-outline">Консультация</a>
+<!-- NAVIGATION -->
+<div id="rec2166260371" class="r t-rec t-rec_pt_0 t-rec_pb_0" style="padding-top:0px;padding-bottom:0px;" data-animationappear="off" data-record-type="2083" data-parenttplid="1272">
+  <div id="nav2166260371marker"></div>
+  <div class="t1272" data-menu="yes" data-menu-widgeticon-members="yes">
+    <div class="t-menu-base__mobile-menu tmenu-mobile">
+      <div class="tmenu-mobile__container tmenu-mobile__container_right tmenu-mobile__container_logoleft">
+        <div class="t-menu-base__logowrapper t-menu-base__logowrapper_center t-menu-base__logowrapper_both t-menu-base__logowrapper_mobile">
+          <div class="t-menu-base__logo">
+            <img class="t-menu-base__imglogo t-menu-base__imglogomobile" src="assets/tilda/img/Weixin_Image_2026042.png" imgfield="img" alt=""/>
+          </div>
+        </div>
+        <style>#rec2166260371 .t-menu-base__imglogo{max-width:100px;width:100px;}</style>
+        <button type="button" aria-expanded="false" aria-label="Навигационное меню" class="t-menu-burger t-menuburger">
+          <div class="t-menu-burger__icon t-menu-burger__icon_first">
+            <span style="background-color: #ff6500;"></span>
+            <span style="background-color: #ff6500;"></span>
+            <span style="background-color: #ff6500;"></span>
+            <span style="background-color: #ff6500;"></span>
+          </div>
+        </button>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- О бренде -->
-<section class="section-about" id="about">
-  <div class="container">
-    <h2 class="section-title" style="font-size:36px;font-family:Georgia,serif;text-align:center;margin-bottom:40px;color:#000;">О бренде</h2>
-    <div class="gallery">
-      <img src="assets/img/gallery1.jpg" alt="FOLLOFEY модуль" class="wide">
-      <img src="assets/img/gallery3.jpg" alt="FOLLOFEY модуль снаружи">
-      <img src="assets/img/gallery2.jpg" alt="FOLLOFEY интерьер">
-    </div>
-    <div class="spec-block">
-      «Корпус из сэндвич-панелей (стеклопластик + XPS + PP композит).<br>
-      Алюминиево-магниевый каркас 6 серии. Толщина стенок 24-34 мм.<br>
-      Крыша — четырёхслойная мягкая, подъёмная.»
-    </div>
-  </div>
-</section>
-
-<!-- Преимущества -->
-<section class="section-adv" id="adv">
-  <div class="container">
-    <h2 class="section-title">Преимущества<br><strong>FOLLOFEY</strong></h2>
-    <p class="section-desc">Узнайте, почему жилые модули FOLLOFEY — это идеальный выбор для вашего автотуризма.</p>
-    <div class="adv-grid">
-      <div class="adv-item">
-        <div class="adv-icon"><svg viewBox="0 0 30 30" fill="none"><circle cx="15" cy="15" r="12" stroke="#ff6500" stroke-width="2"/><path d="M10 15l3 3 7-7" stroke="#ff6500" stroke-width="2" stroke-linecap="round"/></svg></div>
-        <div class="adv-text"><h3>Адаптация к российскому климату</h3><p>Утеплённые сэндвич-панели и другие решения для комфортной эксплуатации в любых погодных условиях.</p></div>
-      </div>
-      <div class="adv-item">
-        <div class="adv-icon"><svg viewBox="0 0 30 30" fill="none"><circle cx="15" cy="15" r="12" stroke="#ff6500" stroke-width="2"/><path d="M10 15l3 3 7-7" stroke="#ff6500" stroke-width="2" stroke-linecap="round"/></svg></div>
-        <div class="adv-text"><h3>Прочная конструкция</h3><p>Алюминиево-магниевый каркас и стеклопластик обеспечивают надёжность и долговечность модуля.</p></div>
-      </div>
-      <div class="adv-item">
-        <div class="adv-icon"><svg viewBox="0 0 30 30" fill="none"><circle cx="15" cy="15" r="12" stroke="#ff6500" stroke-width="2"/><path d="M10 15l3 3 7-7" stroke="#ff6500" stroke-width="2" stroke-linecap="round"/></svg></div>
-        <div class="adv-text"><h3>Не требует регистрации в ГИБДД</h3><p>Классифицируется как сменный кузов. Код ТН ВЭД 8708, не облагается утильсбором.</p></div>
-      </div>
-      <div class="adv-item">
-        <div class="adv-icon"><svg viewBox="0 0 30 30" fill="none"><circle cx="15" cy="15" r="12" stroke="#ff6500" stroke-width="2"/><path d="M10 15l3 3 7-7" stroke="#ff6500" stroke-width="2" stroke-linecap="round"/></svg></div>
-        <div class="adv-text"><h3>Полная автономность</h3><p>Уже в базовом исполнении есть солнечная панель и аккумулятор, обеспечивающие независимость от внешних источников энергии.</p></div>
-      </div>
-      <div class="adv-item">
-        <div class="adv-icon"><svg viewBox="0 0 30 30" fill="none"><circle cx="15" cy="15" r="12" stroke="#ff6500" stroke-width="2"/><path d="M10 15l3 3 7-7" stroke="#ff6500" stroke-width="2" stroke-linecap="round"/></svg></div>
-        <div class="adv-text"><h3>Лучшая цена в сегменте</h3><p>На 15-30% ниже аналогов при сопоставимом качестве и комплектации.</p></div>
-      </div>
-      <div class="adv-item">
-        <div class="adv-icon"><svg viewBox="0 0 30 30" fill="none"><circle cx="15" cy="15" r="12" stroke="#ff6500" stroke-width="2"/><path d="M10 15l3 3 7-7" stroke="#ff6500" stroke-width="2" stroke-linecap="round"/></svg></div>
-        <div class="adv-text"><h3>Толщина стенок 24-34 мм</h3><p>Держат температуру до -30°C. Четырёхслойная мягкая крыша для максимальной теплоизоляции.</p></div>
+    <style>.tmenu-mobile{background-color:#111;display:none;width:100%;top:0;z-index:990;}.tmenu-mobile_positionfixed{position:fixed;}.tmenu-mobile__text{color:#000;}.tmenu-mobile__container{min-height:64px;padding:20px;position:relative;box-sizing:border-box;display:flex;justify-content:space-between;align-items:center;}.tmenu-mobile__list{display:block;}.tmenu-mobile__container_logocenter > .t-menu-base__logowrapper,.tmenu-mobile__container_logocenter > .tmenu-mobile__text{position:absolute;left:50%;transform:translateX(-50%);}.tmenu-mobile__burgerlogo{display:inline-block;font-size:24px;font-weight:400;white-space:nowrap;vertical-align:middle;}@media screen and (max-width:960px){.tmenu-mobile__menucontent_hidden{display:none;height:auto;}.tmenu-mobile{display:block;}}@media screen and (max-width:960px){#rec2166260371 .tmenu-mobile{background-color:#000000;}}</style>
+    <style>#rec2166260371 .tmenu-mobile__burgerlogo a{font-size:34px;line-height:0.5;color:#ffffff;font-family:'Georgia';font-weight:700;}</style>
+    <style>#rec2166260371 .tmenu-mobile__burgerlogo__title{color:#ffffff;font-family:'Georgia';font-weight:700;}@media screen and (min-width:900px){#rec2166260371 .tmenu-mobile__burgerlogo__title{font-size:34px;line-height:0.5;}}</style>
+    <div id="nav2166260371" class="t-menu-base t-menu-base_positionabsolute tmenu-mobile__menucontent_hidden" data-navmarker="nav2166260371marker" data-appearoffset="" data-bgopacity-two="1" data-menu="yes" data-bgcolor-hex="#292929" data-bgcolor-rgba="rgba(41,41,41,1)" data-bgopacity="1" data-menushadow="" data-menushadow-css="">
+      <div class="t-menu-base__maincontainer t-menu-base__maincontainer_100 t-menu-base__maincontainer_100-40 t-menu-base__maincontainer_logocenter">
+        <ul role="list" class="t-menu-base__list t-menu__list t-menu-base__list_leftside t-menu-base__list_align-right">
+          <li class="t-menu-base__list-item"><div class="t-menu__link-wrapper" data-menu-submenu-hook=""><a class="t-menu__link-item" href="#rec2166261531" data-menu-item-number="1">Главная</a></div></li>
+          <li class="t-menu-base__list-item"><div class="t-menu__link-wrapper" data-menu-submenu-hook=""><a class="t-menu__link-item" href="#rec2178550341" data-menu-item-number="2">О бренде</a></div></li>
+          <li class="t-menu-base__list-item"><div class="t-menu__link-wrapper" data-menu-submenu-hook=""><a class="t-menu__link-item" href="#rec2166261611" data-menu-item-number="3">Преимущества</a></div></li>
+        </ul>
+        <div class="t-menu-base__logowrapper t-menu-base__logowrapper_center t-menu-base__logowrapper_both">
+          <div class="t-menu-base__logo">
+            <img class="t-menu-base__imglogo t-menu-base__imglogomobile" src="assets/tilda/img/Weixin_Image_2026042.png" imgfield="img" alt=""/>
+          </div>
+        </div>
+        <style>#rec2166260371 .t-menu-base__imglogo{max-width:100px;width:100px;}</style>
+        <ul role="list" class="t-menu-base__list t-menu__list t-menu-base__list_rightside t-menu-base__list_align-right">
+          <li class="t-menu-base__list-item"><div class="t-menu__link-wrapper" data-menu-submenu-hook=""><a class="t-menu__link-item" href="#rec2166262141" data-menu-item-number="4">Модели</a></div></li>
+          <li class="t-menu-base__list-item"><div class="t-menu__link-wrapper" data-menu-submenu-hook=""><a class="t-menu__link-item" href="#rec2166262421" data-menu-item-number="5">Вопросы</a></div></li>
+          <li class="t-menu-base__list-item"><div class="t-menu__link-wrapper" data-menu-submenu-hook=""><a class="t-menu__link-item" href="#rec2166262451" data-menu-item-number="6">Контакты</a></div></li>
+        </ul>
       </div>
     </div>
   </div>
-</section>
+  <script>t_onReady(function(){t_onFuncLoad('t1272_init',function(){t1272_init('2166260371');});});</script>
+  <style>#rec2166260371 a.t-menu__link-item{font-size:20px;font-weight:600;color:#ffffff;}@media screen and (max-width:480px),(orientation:landscape) and (max-height:480px){#rec2166260371 a.t-menu__link-item{font-size:16px;}}#rec2166260371 .t-menu-base{background-color:rgba(41,41,41,1);}</style>
+</div>
 
-<!-- Модели -->
-<section class="section-models" id="models">
-  <div class="container">
-    <h2 class="section-title">Модельный ряд</h2>
-    <div class="models-grid">
-      <div class="model-card">
-        <img src="assets/img/gallery3.jpg" alt="FOLLOFEY A3">
-        <div class="model-body">
-          <h3>FOLLOFEY <span>A3</span></h3>
-          <div class="price">от 895 000 ₽</div>
-          <ul>
-            <li>Компактный модуль для двоих</li>
-            <li>Спальное место 140×200 см</li>
-            <li>Обеденная зона + мини-кухня</li>
-            <li>Холодильник 40 л</li>
-            <li>Солнечная панель 100 Вт</li>
-            <li>Срок изготовления до 30 дней</li>
-          </ul>
-          <a href="#contact" class="btn btn-primary">Заказать</a>
+<!-- HERO -->
+<div id="rec2166261531" class="r t-rec" style="background-color:#292929;" data-animationappear="off" data-record-type="396">
+  <style>#rec2166261531 .t396__artboard{height:600px;background-color:#292929;}#rec2166261531 .t396__filter{height:600px;background-image:linear-gradient(0deg,rgba(0,0,0,0.3),rgba(0,0,0,0.0));}@media (max-width:480px){#rec2166261531 .t396__artboard{height:500px;}#rec2166261531 .t396__filter{height:500px;}}</style>
+  <div class="t396">
+    <div class="t396__artboard" data-artboard-recid="2166261531">
+      <div class="t396__filter t396__filter_opacity_100"></div>
+      <div class="t396__carrier" data-recalc-width="1">
+        <div class="t396__cover" data-recalc-width="1" style="background-image:url('assets/img/hero.jpg');background-size:cover;background-position:center;"></div>
+      </div>
+      <div class="t396__elem tn-elem tn-elem__21662615311779449269174" data-elem-id="1779449269174" data-elem-type="text" data-field-top-value="150" data-field-left-value="60" data-field-height-value="180" data-field-width-value="700" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" style="top:150px;left:60px;width:700px;">
+        <div class="tn-atom" field="tn_text_1779449269174" style="font-size:56px;font-family:Georgia;font-weight:700;color:#fff;line-height:1.1;">Дом, который<br>всегда с тобой</div>
+      </div>
+      <div class="t396__elem tn-elem tn-elem__2166261531177949272561" data-elem-id="177949272561" data-elem-type="text" data-field-top-value="370" data-field-left-value="60" data-field-width-value="600" style="top:370px;left:60px;width:600px;">
+        <div class="tn-atom" field="tn_text_177949272561" style="font-size:18px;color:rgba(255,255,255,.8);">Съёмные жилые модули для пикапов. Лёгкие, прочные, автономные.</div>
+      </div>
+      <div class="t396__elem tn-elem tn-elem__2166261531177949304409" data-elem-id="177949304409" data-elem-type="button" data-field-top-value="430" data-field-left-value="60" style="top:430px;left:60px;">
+        <a href="#rec2166262141" class="tn-atom" style="background-color:#ff6500;border-radius:30px;padding:14px 36px;color:#fff;font-size:16px;font-weight:600;">Выбрать модель</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- О БРЕНДЕ: Gallery -->
+<div id="rec2178550341" class="r t-rec t-rec_pt_90 t-rec_pb_30" style="padding-top:90px;padding-bottom:30px;" data-record-type="486">
+  <div class="t486">
+    <div class="t-container">
+      <div class="t-col t-col_10 t-prefix_1"><h2 class="t486__title t-title t-title_xxs" field="title">О бренде</h2></div>
+    </div>
+    <div class="t486__container t-container">
+      <div class="t486__row">
+        <div class="t486__imgwrapper"><div class="t486__blockimg t-bgimg" data-original="assets/img/gallery1.jpg" style="background-image:url('assets/img/gallery1.jpg');"></div></div>
+        <div class="t486__imgwrapper"><div class="t486__blockimg t-bgimg" data-original="assets/img/gallery3.jpg" style="background-image:url('assets/img/gallery3.jpg');"></div></div>
+      </div>
+      <div class="t486__row t486__row_last">
+        <div class="t486__imgwrapper"><div class="t486__blockimg t-bgimg" data-original="assets/img/gallery2.jpg" style="background-image:url('assets/img/gallery2.jpg');"></div></div>
+        <div class="t486__imgwrapper"><div class="t486__blockimg t-bgimg" data-original="assets/img/hero.jpg" style="background-image:url('assets/img/hero.jpg');"></div></div>
+      </div>
+    </div>
+  </div>
+  <style>#rec2178550341 .t486__blockimg{border-radius:15px;}</style>
+</div>
+
+<!-- СПЕЦИФИКАЦИЯ -->
+<div id="rec2178554391" class="r t-rec t-rec_pt_30 t-rec_pb_30" style="padding-top:30px;padding-bottom:30px;background-color:#ffffff;" data-record-type="474">
+  <div class="t474">
+    <div class="t-container t-align_center">
+      <div class="t-col t-col_10 t-prefix_1">
+        <div class="t474__descr t-descr t-descr_xxxl t-margin_auto" field="descr" style="font-size:26px;color:#000;">«Корпус из сэндвич-панелей (стеклопластик + XPS + PP композит).<br/>Алюминиево-магниевый каркас 6 серии. Толщина стенок 24-34 мм.<br/>Крыша — четырёхслойная мягкая, подъёмная.»</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ПРЕИМУЩЕСТВА -->
+<div id="rec2166261611" class="r t-rec t-rec_pt_90 t-rec_pt-res-480_90 t-rec_pb_135 t-rec_pb-res-480_90" style="padding-top:90px;padding-bottom:135px;background-color:#292929;" data-animationappear="off" data-record-type="820">
+  <div class="t820">
+    <div class="t-section__container t-container t-container_flex">
+      <div class="t-col t-col_12">
+        <div class="js-block-header-title t-section__title t-title t-title_xs t-align_center t-margin_auto" field="btitle">Преимущества<br/><strong>FOLLOFEY</strong></div>
+        <div class="js-block-header-descr t-section__descr t-descr t-descr_xl t-align_center t-margin_auto" field="bdescr">Узнайте, почему жилые модули FOLLOFEY — это идеальный выбор для вашего автотуризма.</div>
+      </div>
+    </div>
+    <style>#rec2166261611 .t-section__title{color:#FFFFFF;}#rec2166261611 .t-section__descr{color:#FFFFFF;}</style>
+    <ul role="list" class="t820__container t-container">
+      <li class="t-col t-col_6 t820__col_first t-item">
+        <div class="t-cell t-valign_top"><div class="t820__bgimg t-bgimg" imgfield="li_img__8297369133600" style="width:30px;height:30px;background-image:url('assets/tilda/img/check5.svg');"></div></div>
+        <div class="t820__textwrapper t-cell t-valign_top"><div class="t-name t-name_md t820__bottommargin" field="li_title__8297369133600">Адаптация к российскому климату</div><div class="t-descr t-descr_sm" field="li_descr__8297369133600">Утеплённые сэндвич-панели и другие решения для комфортной эксплуатации в любых погодных условиях.</div></div>
+      </li>
+      <li class="t-col t-col_6 t-item">
+        <div class="t-cell t-valign_top"><div class="t820__bgimg t-bgimg" imgfield="li_img__8297369133601" style="width:30px;height:30px;background-image:url('assets/tilda/img/check5.svg');"></div></div>
+        <div class="t820__textwrapper t-cell t-valign_top"><div class="t-name t-name_md t820__bottommargin" field="li_title__8297369133601">Прочная конструкция</div><div class="t-descr t-descr_sm" field="li_descr__8297369133601">Алюминиево-магниевый каркас и стеклопластик обеспечивают надёжность и долговечность модуля.</div></div>
+      </li>
+      <li class="t-col t-col_6 t-item">
+        <div class="t-cell t-valign_top"><div class="t820__bgimg t-bgimg" imgfield="li_img__2917369133602" style="width:30px;height:30px;background-image:url('assets/tilda/img/check5.svg');"></div></div>
+        <div class="t820__textwrapper t-cell t-valign_top"><div class="t-name t-name_md t820__bottommargin" field="li_title__2917369133602">Не требует регистрации в ГИБДД</div><div class="t-descr t-descr_sm" field="li_descr__2917369133602">Классифицируется как сменный кузов, что упрощает юридическое оформление. Код ТН ВЭД 8708, не облагается утильсбором.</div></div>
+      </li>
+      <li class="t-col t-col_6 t-item">
+        <div class="t-cell t-valign_top"><div class="t820__bgimg t-bgimg" imgfield="li_img__2917369133603" style="width:30px;height:30px;background-image:url('assets/tilda/img/check5.svg');"></div></div>
+        <div class="t820__textwrapper t-cell t-valign_top"><div class="t-name t-name_md t820__bottommargin" field="li_title__2917369133603">Полная автономность</div><div class="t-descr t-descr_sm" field="li_descr__2917369133603">Уже в базовом исполнении есть солнечная панель и аккумулятор, обеспечивающие независимость от внешних источников энергии.</div></div>
+      </li>
+      <li class="t-col t-col_6 t-item">
+        <div class="t-cell t-valign_top"><div class="t820__bgimg t-bgimg" imgfield="li_img__1776823973556" style="width:30px;height:30px;background-image:url('assets/tilda/img/check5.svg');"></div></div>
+        <div class="t820__textwrapper t-cell t-valign_top"><div class="t-name t-name_md t820__bottommargin" field="li_title__1776823973556">Лучшая цена в сегменте</div><div class="t-descr t-descr_sm" field="li_descr__1776823973556">На 15-30% ниже аналогов</div></div>
+      </li>
+      <li class="t-col t-col_6 t-item">
+        <div class="t-cell t-valign_top"><div class="t820__bgimg t-bgimg" imgfield="li_img__1776824008076" style="width:30px;height:30px;background-image:url('assets/tilda/img/check5.svg');"></div></div>
+        <div class="t820__textwrapper t-cell t-valign_top"><div class="t-name t-name_md t820__bottommargin" field="li_title__1776824008076">Адаптация под Российские погодные условия</div><div class="t-descr t-descr_sm" field="li_descr__1776824008076">Толщина стенок 24-34 мм, держат температуру до -30°C.</div></div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- КОНФИГУРАТОР -->
+<div id="rec2238995471" class="r t-rec" style="" data-animationappear="off" data-record-type="131">
+  <div class="t123">
+    <div class="t-container_100">
+      <div class="t-width t-width_100">
+        <iframe src="https://anzaya.github.io/follofey-configurator/" style="width:100%;height:1850px;border:none;max-width:1200px;margin:0 auto;display:block;"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- КАТАЛОГ -->
+<div id="rec2166262141" class="r t-rec" style="background-color:#fff;padding-top:90px;padding-bottom:90px;" data-animationappear="off" data-record-type="478">
+  <div class="t478">
+    <div class="t-section__container t-container">
+      <div class="t-col t-col_12"><h2 class="t-section__title t-title t-title_xs t-align_center" style="color:#000;">Модельный ряд</h2></div>
+    </div>
+    <div class="t-container">
+      <div class="t-col t-col_6">
+        <div class="t478__card" style="border:1px solid #e0e0e0;border-radius:16px;overflow:hidden;">
+          <img src="assets/img/gallery3.jpg" alt="A3" style="width:100%;height:260px;object-fit:cover;">
+          <div style="padding:28px;">
+            <div style="font-size:22px;font-weight:700;margin-bottom:8px;">FOLLOFEY <span style="color:#ff6500;">A3</span></div>
+            <div style="font-size:28px;font-weight:700;color:#ff6500;margin-bottom:16px;">от 895 000 ₽</div>
+            <ul style="list-style:none;margin-bottom:20px;">
+              <li style="padding:8px 0;border-bottom:1px solid #eee;font-size:14px;color:#555;">✓ Компактный модуль для двоих</li>
+              <li style="padding:8px 0;border-bottom:1px solid #eee;font-size:14px;color:#555;">✓ Спальное место 140×200 см</li>
+              <li style="padding:8px 0;border-bottom:1px solid #eee;font-size:14px;color:#555;">✓ Обеденная зона + мини-кухня</li>
+              <li style="padding:8px 0;border-bottom:1px solid #eee;font-size:14px;color:#555;">✓ Холодильник 40 л</li>
+              <li style="padding:8px 0;border-bottom:1px solid #eee;font-size:14px;color:#555;">✓ Солнечная панель 100 Вт</li>
+              <li style="padding:8px 0;border-bottom:1px solid #eee;font-size:14px;color:#555;">✓ Срок изготовления до 30 дней</li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="model-card">
-        <img src="assets/img/gallery1.jpg" alt="FOLLOFEY A3 Max">
-        <div class="model-body">
-          <h3>FOLLOFEY <span>A3 Max</span></h3>
-          <div class="price">от 1 090 000 ₽</div>
-          <ul>
-            <li>Увеличенный модуль для семьи</li>
-            <li>Двуспальная кровать + трансформируемый диван</li>
-            <li>Полноценная кухня с раковиной</li>
-            <li>Холодильник 60 л</li>
-            <li>Солнечная панель 200 Вт + доп. аккумулятор</li>
-            <li>Срок изготовления до 45 дней</li>
-          </ul>
-          <a href="#contact" class="btn btn-primary">Заказать</a>
+      <div class="t-col t-col_6">
+        <div class="t478__card" style="border:1px solid #e0e0e0;border-radius:16px;overflow:hidden;">
+          <img src="assets/img/gallery1.jpg" alt="A3 Max" style="width:100%;height:260px;object-fit:cover;">
+          <div style="padding:28px;">
+            <div style="font-size:22px;font-weight:700;margin-bottom:8px;">FOLLOFEY <span style="color:#ff6500;">A3 Max</span></div>
+            <div style="font-size:28px;font-weight:700;color:#ff6500;margin-bottom:16px;">от 1 090 000 ₽</div>
+            <ul style="list-style:none;margin-bottom:20px;">
+              <li style="padding:8px 0;border-bottom:1px solid #eee;font-size:14px;color:#555;">✓ Увеличенный модуль для семьи</li>
+              <li style="padding:8px 0;border-bottom:1px solid #eee;font-size:14px;color:#555;">✓ Двуспальная кровать + диван</li>
+              <li style="padding:8px 0;border-bottom:1px solid #eee;font-size:14px;color:#555;">✓ Полноценная кухня с раковиной</li>
+              <li style="padding:8px 0;border-bottom:1px solid #eee;font-size:14px;color:#555;">✓ Холодильник 60 л</li>
+              <li style="padding:8px 0;border-bottom:1px solid #eee;font-size:14px;color:#555;">✓ Солнечная панель 200 Вт</li>
+              <li style="padding:8px 0;border-bottom:1px solid #eee;font-size:14px;color:#555;">✓ Срок изготовления до 45 дней</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</section>
-
-<!-- Конфигуратор -->
-<section class="section-config">
-  <div class="container">
-    <h2 class="section-title">Конфигуратор</h2>
-    <p class="section-desc">Соберите свой идеальный модуль онлайн</p>
-    <div class="config-wrap">
-      <iframe src="https://anzaya.github.io/follofey-configurator/" loading="lazy"></iframe>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<div class="cta-block">
-  <h2>Готовы к путешествиям?</h2>
-  <p>Свяжитесь с нами — обсудим конфигурацию и сроки</p>
-  <a href="#contact" class="btn btn-outline">Связаться</a>
 </div>
 
 <!-- FAQ -->
-<section class="section-faq" id="faq">
-  <div class="container">
-    <h2 class="section-title">Вопросы:</h2>
-    <div class="faq-list">
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Нужно ли регистрировать жилой модуль в ГИБДД?<span class="icon"></span></button><div class="faq-a"><div class="faq-a-inner">Нет, не нужно. Наши модули классифицируются как сменные кузова (код ТН ВЭД 8708). Они не имеют собственного шасси и VIN-номера, поэтому регистрация в ГИБДД не требуется. Вам не нужно получать ОТТС или проходить техосмотр.</div></div></div>
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Можно ли установить модуль на любой пикап?<span class="icon"></span></button><div class="faq-a"><div class="faq-a-inner">Да, модуль совместим с популярными моделями пикапов, такими как Toyota Hilux, Ford Ranger, Great Wall Poer и другими.</div></div></div>
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Какие условия гарантии предоставляются?<span class="icon"></span></button><div class="faq-a"><div class="faq-a-inner">Гарантия на корпус модуля — 3 года. Гарантия на встраиваемое оборудование (аккумуляторы, инверторы, отопители) — 12 месяцев.</div></div></div>
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Сколько времени занимает изготовление модуля?<span class="icon"></span></button><div class="faq-a"><div class="faq-a-inner">Для модели A3 — до 30 дней. Для модели A3 Max — до 45 дней. Срок отсчитывается с момента получения предоплаты 50%.</div></div></div>
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Цена указана с НДС?<span class="icon"></span></button><div class="faq-a"><div class="faq-a-inner">Да. Это официальная продажа через ООО с полным пакетом документов и выделенным НДС — 22%.</div></div></div>
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Можно ли купить модуль в лизинг?<span class="icon"></span></button><div class="faq-a"><div class="faq-a-inner">К сожалению пока нет, но мы ищем банк-партнёра.</div></div></div>
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Сложно ли установить модуль самостоятельно?<span class="icon"></span></button><div class="faq-a"><div class="faq-a-inner">Нет, не сложно. Два человека справятся в течение 30 минут. В комплекте поставляются четыре «ноги» для поднятия модуля на необходимую высоту. Есть люки для крепления модуля к кузову.</div></div></div>
+<div id="rec2166262421" class="r t-rec t-rec_pt_90 t-rec_pb_90" style="padding-top:90px;padding-bottom:90px;background-color:#ffffff;" data-animationappear="off" data-record-type="849">
+  <div class="t849">
+    <div class="t-section__container t-container"><div class="t-col t-col_12"><div class="t-section__title t-title t-title_xs t-align_center" style="color:#000;">Вопросы:</div></div></div>
+    <div class="t-container">
+      <div class="t-item t-col t-col_8 t-prefix_2">
+        <div class="t849__accordion">
+          <div class="t849__wrapper">
+            <div class="t849__header" style="border-top:1px solid #000;"><button type="button" class="t849__trigger-button" aria-controls="accordion1" aria-expanded="false"><span class="t849__title t-name t-name_xl">Нужно ли регистрировать жилой модуль в ГИБДД?</span></button></div>
+            <div class="t849__content" id="accordion1" hidden><div class="t849__textwrapper"><div class="t849__text t-descr t-descr_sm">Нет, не нужно. Наши модули классифицируются как сменные кузова (код ТН ВЭД 8708). Они не имеют собственного шасси и VIN-номера, поэтому регистрация в ГИБДД не требуется. Вам не нужно получать ОТТС или проходить техосмотр.</div></div></div>
+          </div>
+          <div class="t849__wrapper">
+            <div class="t849__header" style="border-top:1px solid #000;"><button type="button" class="t849__trigger-button" aria-controls="accordion2" aria-expanded="false"><span class="t849__title t-name t-name_xl">Можно ли установить модуль на любой пикап?</span></button></div>
+            <div class="t849__content" id="accordion2" hidden><div class="t849__textwrapper"><div class="t849__text t-descr t-descr_sm">Да, модуль совместим с популярными моделями пикапов, такими как Toyota Hilux, Ford Ranger, Great Wall Poer и другими.</div></div></div>
+          </div>
+          <div class="t849__wrapper">
+            <div class="t849__header" style="border-top:1px solid #000;"><button type="button" class="t849__trigger-button" aria-controls="accordion3" aria-expanded="false"><span class="t849__title t-name t-name_xl">Какие условия гарантии предоставляются?</span></button></div>
+            <div class="t849__content" id="accordion3" hidden><div class="t849__textwrapper"><div class="t849__text t-descr t-descr_sm">Гарантия на корпус модуля — 3 года. Гарантия на встраиваемое оборудование (аккумуляторы, инверторы, отопители) — 12 месяцев.</div></div></div>
+          </div>
+          <div class="t849__wrapper">
+            <div class="t849__header" style="border-top:1px solid #000;"><button type="button" class="t849__trigger-button" aria-controls="accordion4" aria-expanded="false"><span class="t849__title t-name t-name_xl">Сколько времени занимает изготовление модуля?</span></button></div>
+            <div class="t849__content" id="accordion4" hidden><div class="t849__textwrapper"><div class="t849__text t-descr t-descr_sm">Для модели A3 — до 30 дней. Для модели A3 Max — до 45 дней. Срок отсчитывается с момента получения предоплаты 50%.</div></div></div>
+          </div>
+          <div class="t849__wrapper">
+            <div class="t849__header" style="border-top:1px solid #000;"><button type="button" class="t849__trigger-button" aria-controls="accordion5" aria-expanded="false"><span class="t849__title t-name t-name_xl">Цена с НДС?</span></button></div>
+            <div class="t849__content" id="accordion5" hidden><div class="t849__textwrapper"><div class="t849__text t-descr t-descr_sm">Да. Это официальная продажа через ООО с полным пакетом документов и выделенным НДС — 22%.</div></div></div>
+          </div>
+          <div class="t849__wrapper">
+            <div class="t849__header" style="border-top:1px solid #000;"><button type="button" class="t849__trigger-button" aria-controls="accordion6" aria-expanded="false"><span class="t849__title t-name t-name_xl">Можно ли купить модуль в лизинг?</span></button></div>
+            <div class="t849__content" id="accordion6" hidden><div class="t849__textwrapper"><div class="t849__text t-descr t-descr_sm">К сожалению пока нет, но мы ищем банк-партнёра.</div></div></div>
+          </div>
+          <div class="t849__wrapper">
+            <div class="t849__header" style="border-top:1px solid #000;"><button type="button" class="t849__trigger-button" aria-controls="accordion7" aria-expanded="false"><span class="t849__title t-name t-name_xl">Сложно ли установить модуль самостоятельно?</span></button></div>
+            <div class="t849__content" id="accordion7" hidden><div class="t849__textwrapper"><div class="t849__text t-descr t-descr_sm">Если коротко — Нет, не сложно, это могут сделать два человека в течение 30 минут. В комплекте поставляются четыре «ноги» для поднятия модуля на необходимую высоту. Есть люки для крепления модуля к кузову.</div></div></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</section>
+  <style>#rec2166262421 .t849__icon{stroke:#000;}#rec2166262421 .t849__title{color:#000;}#rec2166262421 .t849__text{color:#000;}</style>
+</div>
 
-<!-- Контакты -->
-<section class="section-contact" id="contact">
-  <div class="container">
-    <h2 class="section-title">Контакты</h2>
-    <p class="section-desc">Мы создаём наш продукт с заботой о вас!</p>
-    <div class="contact-wrap">
-      <div class="contact-info">
-        <div class="phone">+7 (904) 148-11-03</div>
-        <div class="email">sales@follofey.ru</div>
-        <div class="address">г. Иркутск, ст. Горка 5</div>
-        <p style="margin-top:24px;color:rgba(255,255,255,.7);">Напишите нам в Telegram:</p>
-        <a href="https://t.me/anzaya" target="_blank" style="color:#ff6500;font-weight:600;font-size:18px;">@anzaya</a>
+<!-- КОНТАКТЫ -->
+<div id="rec2187904341" class="r t-rec t-rec_pt_60 t-rec_pb_60" style="padding-top:60px;padding-bottom:60px;background-color:#292929;" data-animationappear="off" data-record-type="718">
+  <div class="t718">
+    <div class="t-section__container t-container"><div class="t-col t-col_12"><div class="t-section__title t-title t-title_xs t-align_center" style="color:#fff;">Контакты</div><div class="t-section__descr t-descr t-descr_xl t-align_center" style="color:#fff;">Мы создаём наш продукт с заботой о вас!</div></div></div>
+    <div class="t-container">
+      <div class="t-col t-col_5 t-prefix_1">
+        <div class="t718__contentbox">
+          <div class="t718__contentwrapper">
+            <div class="t718__contacts t-text t-descr_xxxl" field="text"><p><strong>+7 (904) 148-11-03</strong></p><p><strong>sales@follofey.ru</strong></p></div>
+            <div class="t718__address t-text t-text_sm" field="text2"><strong>г. Иркутск, ст. Горка 5</strong></div>
+            <div style="margin-top:16px;"><a href="https://t.me/anzaya" target="_blank" style="color:#ff6500;font-weight:600;font-size:18px;">Telegram: @anzaya</a></div>
+          </div>
+        </div>
       </div>
-      <div class="form-wrap">
-        <form action="https://formspree.io/f/xkgnkjzg" method="POST">
-          <input type="email" name="Email" placeholder="Ваш Email" required>
-          <input type="text" name="Name" placeholder="Ваше имя" required>
-          <textarea name="Message" placeholder="Ваш вопрос или комментарий" required></textarea>
-          <button type="submit" class="btn btn-primary">Отправить</button>
+      <div class="t-col t-col_5">
+        <form id="form2187904341" name="form2187904341" role="form" action="https://formspree.io/f/xkgnkjzg" method="POST" class="t-form js-form-proccess t-form_inputs-total_3">
+          <div class="t-form__inputsbox t-form__inputsbox_vertical-form">
+            <div class="t-input-group"><div class="t-input-block"><input type="email" name="Email" class="t-input" placeholder="Ваш Email" style="border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;border-radius:8px;padding:14px 16px;"></div></div>
+            <div class="t-input-group"><div class="t-input-block"><input type="text" name="Name" class="t-input" placeholder="Ваше имя" style="border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;border-radius:8px;padding:14px 16px;"></div></div>
+            <div class="t-input-group"><div class="t-input-block"><textarea name="Textarea" class="t-input" placeholder="Ваш комментарий" style="border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;border-radius:8px;padding:14px 16px;height:102px;" rows="3"></textarea></div></div>
+            <div class="t-form__submit"><button type="submit" class="t-submit" style="background-color:#ff6500;color:#fff;border-radius:30px;padding:14px 36px;border:none;cursor:pointer;font-size:16px;">Отправить</button></div>
+          </div>
         </form>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<!-- Sticky CTA -->
-<div class="sticky-cta">
-  <a href="https://t.me/anzaya" target="_blank" aria-label="Telegram">
-    <svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.127.007.49-.012.653-.11 1.02-.89 5.272-1.26 6.986-.16.726-.32 1.158-.537 1.378a1.44 1.44 0 0 1-.454.287c-.126.045-.293.033-.461.004-.378-.06-.65-.125-1.04-.223-.692-.174-1.497-.453-2.268-.863-1.45-.77-2.262-1.662-2.577-2.07a.84.84 0 0 1-.113-.177.368.368 0 0 1 .028-.345.684.684 0 0 1 .155-.177c.077-.053.387-.342.747-.658.63-.55.695-.617.727-.685a.366.366 0 0 0 .007-.272.81.81 0 0 0-.077-.167c-.105-.165-.256-.28-.683-.5-.357-.185-.648-.334-.827-.478-.207-.167-.303-.34-.289-.532.01-.113.056-.211.168-.336.264-.294 1.06-.751 2.093-1.098.835-.28 2.145-.613 2.94-.74.364-.058 1.016-.137 1.326-.115z"/></svg>
+<!-- ФУТЕР -->
+<div id="rec2166262521" class="r t-rec t-rec_pt_0 t-rec_pb_30" style="padding-top:0px;padding-bottom:30px;background-color:#292929;" data-animationappear="off" data-record-type="144">
+  <div class="t134">
+    <div class="t-container">
+      <div class="t-col t-col_10 t-prefix_1">
+        <a class="t134__link" href="/follofey-site/">
+          <img class="t134__img" src="assets/tilda/img/Weixin_Image_2026042.png" style="max-width:120px;width:100%;" alt="">
+        </a>
+        <div class="t134__title" field="title"><strong>ООО «Фоллофи»</strong></div>
+        <div class="t134__descr" field="descr"><br/>© Все права защищены<br/><a href="mailto:info@follofey.ru">info@follofey.ru</a></div>
+      </div>
+    </div>
+  </div>
+  <style>#rec2166262521 .t134__title,#rec2166262521 .t134__descr{color:#ffffff;}</style>
+</div>
+
+</div>
+
+<!-- Tilda init scripts -->
+<script>
+t_onReady(function(){t_onFuncLoad('t849_init',function(){t849_init('2166262421');});});
+</script>
+
+<!-- Sticky Telegram -->
+<div style="position:fixed;bottom:24px;right:24px;z-index:9999;">
+  <a href="https://t.me/anzaya" target="_blank" style="width:56px;height:56px;border-radius:50%;background:#0088cc;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.3);">
+    <svg viewBox="0 0 24 24" style="width:28px;height:28px;fill:#fff;"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.127.007.49-.012.653-.11 1.02-.89 5.272-1.26 6.986-.16.726-.32 1.158-.537 1.378a1.44 1.44 0 0 1-.454.287c-.126.045-.293.033-.461.004-.378-.06-.65-.125-1.04-.223-.692-.174-1.497-.453-2.268-.863-1.45-.77-2.262-1.662-2.577-2.07a.84.84 0 0 1-.113-.177.368.368 0 0 1 .028-.345.684.684 0 0 1 .155-.177c.077-.053.387-.342.747-.658.63-.55.695-.617.727-.685a.366.366 0 0 0 .007-.272.81.81 0 0 0-.077-.167c-.105-.165-.256-.28-.683-.5-.357-.185-.648-.334-.827-.478-.207-.167-.303-.34-.289-.532.01-.113.056-.211.168-.336.264-.294 1.06-.751 2.093-1.098.835-.28 2.145-.613 2.94-.74.364-.058 1.016-.137 1.326-.115z"/></svg>
   </a>
 </div>
 
-<!-- Footer -->
-<footer>
-  <img src="assets/img/logo.png" alt="FOLLOFEY" class="logo">
-  <div class="company">ООО «Фоллофи»</div>
-  <div class="copy">© Все права защищены<br><a href="mailto:info@follofey.ru">info@follofey.ru</a></div>
-</footer>
-
-<script>
-function toggleFaq(btn) {
-  btn.classList.toggle('active');
-  const content = btn.nextElementSibling;
-  content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + 'px';
-}
-</script>
 </body>
 </html>
